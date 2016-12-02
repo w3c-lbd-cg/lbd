@@ -1,5 +1,5 @@
-# lbdw
-This repository is for storing the developments of the Building Topology Ontology (BOT) being developed within the auspices of the W3C Linked Building Data Community Group and is intended to become the core ontology for a new W3C Building Data on the Web Working Group. 
+# The Linked Building Data (on the Web) Community Group - lbdw
+This repository is for storing the developments of the Building Topology Ontology (BOT) being developed within the auspices of the W3C Linked Building Data (on the Web) Community Group and is intended to become the core ontology for a new W3C Building Data on the Web Working Group. 
 
 ## How to Get Involved
 
