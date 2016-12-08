@@ -15,7 +15,7 @@
   
 **Suggested Data Standards:** e.g. BOT
 
-**Example Implementation: **
+**Example Implementation:**
 
 **Use case contributors:** 
 
