@@ -1,19 +1,21 @@
-Title: The title of the use case
-Description: A short description of the use case
-Data Domain(s): E.g. Building Topology, Building Geometry, etc.
-Objectives: A short description of the objectives of the use case
-Stakeholders:
-LD Benefits:
+# Use Case Template
+
+##Title: The title of the use case
+##Description: A short description of the use case
+##Data Domain(s): E.g. Building Topology, Building Geometry, etc.
+##Objectives: A short description of the objectives of the use case
+##Stakeholders:
+##LD Benefits:
   benefit 1
   benefit 2
-Challenges
+##Challenges
   challenge 1
   challenge 2
-Suggested Data Standards: e.g. BOT
-Example Implementation: 
-Use case contributors: 
+##Suggested Data Standards: e.g. BOT
+##Example Implementation: 
+##Use case contributors: 
 
-
+# Inital Set of Use Cases
 UC1
 Title: Indoor Navigation
 Description: This use case is to support a range of indoor navigation scenarios, ranging from building evacuation, facility managers to find equipment, to customers finding commercial products. 
