@@ -14,7 +14,9 @@
   2. challenge 2
   
 **Suggested Data Standards:** e.g. BOT
+
 **Example Implementation: **
+
 **Use case contributors:** 
 
 # Inital Set of Use Cases
