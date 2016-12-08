@@ -20,14 +20,23 @@
 # Inital Set of Use Cases
 ###UC1
 **Title:** Indoor Navigation
+
 **Description:** This use case is to support a range of indoor navigation scenarios, ranging from building evacuation, facility managers to find equipment, to customers finding commercial products. 
+
 **Data Domain(s):** Building Topology, Building Geometry, User Location
+
 **Objectives:** The objective of this use case is to support publishing of building models so that they become available for indoor navigation. 
+
 **Stakeholders:** Building Designers, Building Owners, Building Occupants, Consumers
+
 **LD Benefits:**
   1. Published models are available over the web
+  
 **Challenges**
   1. Generating appropriate models
+  
 **Suggested Data Standards:** e.g. BOT
+
 **Example Implementation:** 
+
 **Use case contributors:**
