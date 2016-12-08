@@ -1,0 +1,119 @@
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fec .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasSpace> .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.student.dtu.dk/~mhoras/bot#Element> .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.student.dtu.dk/~mhoras/bot#Space> .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til en bygningsdel, som er indeholdt i et rum"@da .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to a building element contained in a space"@en .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "Indeholdt i"@da .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "Contained in"@en .
+<http://www.student.dtu.dk/~mhoras/bot#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe3 <http://www.w3.org/2002/07/owl#members> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe2 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#adjacentElement> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#adjacentElement> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe1 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#Element> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe7 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasSpace> .
+<http://www.student.dtu.dk/~mhoras/bot#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.student.dtu.dk/~mhoras/bot#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.student.dtu.dk/~mhoras/bot#description> <http://www.w3.org/2000/01/rdf-schema#label> "Beskrivelse"@da .
+<http://www.student.dtu.dk/~mhoras/bot#description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+<http://www.student.dtu.dk/~mhoras/bot#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.student.dtu.dk/~mhoras/bot#Space> .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.student.dtu.dk/~mhoras/bot#Storey> .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til rum, hvis plan er placeret p\u00E5 etagen."@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to spaces whose plan is located at the storey."@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Har rum"@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Has space"@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe8 .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "Har bygningsdel"@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7feb .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to elements belonging to a building or a storey."@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.student.dtu.dk/~mhoras/bot#Element> .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe6 .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "Has element"@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til elementer, h\u00F8rende til en en bygning eller en etage."@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fed .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "En uafh\u00E6ngig del af det byggede milj\u00F8 med en karakteristisk rumlig struktur, der underst\u00F8tter mindst \u00E9n funktion eller brugeraktivitet"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Bygning"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/ontology/Building> .
+<http://www.student.dtu.dk/~mhoras/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#class> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fea .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasStorey> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe0 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#Space> .
+<http://www.student.dtu.dk/~mhoras/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "En afgr\u00E6nset tredimensionel udstr\u00E6kning defineret fysisk eller fiktivt"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Rum"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#class> .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.student.dtu.dk/~mhoras/bot#Element> .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.student.dtu.dk/~mhoras/bot#Space> .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til bygningsdele, som afgr\u00E6nser et fysisk rum"@da .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to building elements bounding a physical space"@en .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "Tilst\u00F8dende element"@da .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "Adjacent element"@en .
+<http://www.student.dtu.dk/~mhoras/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.student.dtu.dk/~mhoras/bot#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> .
+<http://www.student.dtu.dk/~mhoras/bot#id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.student.dtu.dk/~mhoras/bot#id> <http://www.w3.org/2000/01/rdf-schema#label> "Id"@da .
+<http://www.student.dtu.dk/~mhoras/bot#id> <http://www.w3.org/2000/01/rdf-schema#label> "Id"@en .
+<http://www.student.dtu.dk/~mhoras/bot#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#containsElement> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe9 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasSpace> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fdf .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#Storey> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe5 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasStorey> .
+<http://www.student.dtu.dk/~mhoras/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Et plan i en bygning"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "A level part of a building"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Etage"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#class> .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/description> "A simple ontology describing the topology of a building" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://www.w3.org/2000/01/rdf-schema#comment> "BygningsTopologiOntologien (BOT) er en simpel ontologi, som definerer kernekoncepterne i en bygning. BOT b\u00F8r udvides til fagspecifikke form\u00E5l som for eksempel home automation, indend\u00F8rs navigation, smart cities mv."@da .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/creator> "Mads Holten Rasmussen (mhoras@byg.dtu.dk)" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/modified> "November 23rd 2016"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.student.dtu.dk/~mhoras/bot> <http://www.w3.org/2000/01/rdf-schema#comment> "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building. BOT should be extended for domain specific purposes such as home automation, indoor navigation, smart cities, etc."@en .
+<http://www.student.dtu.dk/~mhoras/bot> <http://www.w3.org/2002/07/owl#versionInfo> "November 23rd 2016"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/title> "BOT" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/creator> "Pieter Pauwels (pipauwel.pauwels@ugent.be)" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/Language> "en" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/dc/elements/1.1/identifier> "BOT" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bot" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.student.dtu.dk/~mhoras/bot> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.student.dtu.dk/~mhoras/bot" .
+<http://www.student.dtu.dk/~mhoras/bot> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.student.dtu.dk/~mhoras/bot#Storey> .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.student.dtu.dk/~mhoras/bot#Building> .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til etager indeholdt i bygningen."@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to storeys contained in the building."@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "Har etage"@da .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "Has storey"@en .
+<http://www.student.dtu.dk/~mhoras/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe4 .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#hasSpace> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#Building> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX55e663acX3aX15897706e6aX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.student.dtu.dk/~mhoras/bot#containsElement> .
+<http://www.student.dtu.dk/~mhoras/bot#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.student.dtu.dk/~mhoras/bot#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.student.dtu.dk/~mhoras/bot#name> <http://www.w3.org/2000/01/rdf-schema#label> "Navn"@da .
+<http://www.student.dtu.dk/~mhoras/bot#name> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
+<http://www.student.dtu.dk/~mhoras/bot#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.student.dtu.dk/~mhoras/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Bestanddel af et bygv\u00E6rk med en karakteristisk funktion, form eller position"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Bygningsdel"@da .
+<http://www.student.dtu.dk/~mhoras/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Building element"@en .
+<http://www.student.dtu.dk/~mhoras/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#class> .
