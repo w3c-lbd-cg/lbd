@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0086)file:///C:/Users/maxime.lefrancois/Dropbox/_Recherche/W3C/lbdw/charter/SDWCharter.html -->
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Building Data on the Web Working Group Charter</title>
+    <link media="screen" type="text/css" href="./index_files/w3cdoc.css" rel="stylesheet">
+    <link href="./index_files/pubrules-style.css" type="text/css" rel="stylesheet">
+    <link href="./index_files/charter-style.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+
+li {padding: 0;
+}
+ul#navbar li { padding-bottom: 0em;}
+
+ul li ul {list-style-type:circle}
+
+sup.ogc, sup.w3c {color:#66f}
+
+time {font-weight:bold}
+
+</style></head>
+  <body>
+
+    <div id="template">
+      <ul style="font-size: small" id="navbar">
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#scope">Scope</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#deliverables">Deliverables</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#coordination">Dependencies and Liaisons (including with BuildingSMART)</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#participation">Participation</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#communication">Communication</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#decisions">Decision Policy</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#patentpolicy">Patent Policy</a></li>
+        <li><a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#about">About this Charter</a></li>
+      </ul>
+
+<p><a href="http://www.w3.org/"><img width="72" height="48" src="./index_files/w3c_home" alt="W3C"></a></p>
+
+<h1 id="title">Building Data on the Web Working Group Charter</h1>
+
+<p>Vast amounts of heterogeneous data are generated and used during the <b>life cycle of a building</b>. An example type of data are product data, which describe the building and the elements that make up the building. These include walls, windows, pipes, ducts, light switches, sensors and several devices. Starting from these data, and through their connection to more fine-grained data, such as sensor measurements data, usage data, intelligent domotic system data, geographical data, weather data, highly advanced services can be supplied over the web to the diverse end users. Several data models (some of which are standards) currently exist which capture aspects of the building and support making the data available to applications. Examples are the Industry Foundation Classes (IFC), SAREF, DogOnt, QUDT, etc. However, these data currently often sit in fragmented silos, making it difficult to develop applications to access and integrate them. Furthermore, where data is available, they may be represented in structures or formats which further inhibit ease of re-use, as they are not necessarily web-oriented. 
+</p>
+<p>
+    The <b>Building Data on the Web Working Group</b> aims to make building data better available on the web. It aims to achieve this through the development of a simplified reference building ontology which is based on existing schemas for building data such as the ones above. The Building Data on the Web Working Group will develop a small core set of concepts and properties which are essential for describing buildings and which can be published as reference building data on the web. This core set of concepts will focus on <b>building topology and building product data</b>, while leaving out geometric data, sensor data, geographic data and other data, as these data are already in scope for other W3C Working Groups. 
+</p>
+<p>
+    We envisage that this approach is essential to exploiting building data on the web for a range of important use cases, including those related to indoor navigation (e.g. shop navigation, evacuation and disaster, etc.), energy efficiency simulation (e.g. retrofitting, behavioural change, etc.), web-based facility management, and many more. This data will allow building owners and companies to publish quality building data on the web in a structured way, making the development of new and novel applications possible. For a complete list of use cases, please see the section on use cases.
+</p>
+
+<p> <!--Several  LDAC, LBD and VoCamp communities <a href="">(reports)</a> workshops have already recognized that many 
+relevant standards already exist <a href="">(link to standards)</a> . With these factors in mind,-->
+The <strong>mission</strong> of the Building Data on the Web Working Group group is to clarify and formalize the relevant standards landscape.
+In particular:</p>
+
+<ol>
+<li>to determine how building information can best be integrated with other data on the Web;</li>
+<li>to determine how machines and people can discover that different facts in different 
+datasets relate to the same building, especially when 'building' is expressed in different ways and at different levels of granularity;</li>
+<li>to identify and assess existing methods and tools and then create a set of best practices for their use;</li>
+<li>where desirable, to complete the standardization of informal technologies already in widespread use.</li>
+</ol>
+
+<p>The <a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/">Building Data on the Web Working Group</a> is part of the <a href="https://www.w3.org/2013/data/">Data Activity</a> and is chartered to work in collaboration with <strong>BuildingSMART International</strong>
+as described in <a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/#coordination">Dependencies &amp; Liaisons</a>.</p>
+
+      <div class="noprint">
+        <!--<p class="join"><a href="https://www.w3.org/2004/01/pp-impl/75471/join">Join the Building Data on the Web Working Group</a></p>-->
+      </div>
+      <table class="summary-table">
+        <tbody>
+          <tr id="Duration">
+            <th>End date</th>
+            <td>30 June 2019</td>
+          </tr>
+          <tr>
+            <th>Confidentiality</th>
+            <td>Proceedings when available will be <!--<a href="/proceeding">-->public</td>
+          </tr>
+          <tr>
+            <th>Initial Chairs</th>
+            <td>Kris McGlinn, <a href="http://kdeg.scss.tcd.ie/users/mcglink">Trinity College Dublin</a><br>
+              Pieter Pauwels, <a href="http://www.architectuur.ugent.be/medewerkers/pieter-pauwels/">Ghent University</a></td>
+          </tr>
+          <tr>
+            <th>Initial Team Contacts<br>(FTE %: 20)</th>
+            <td>Pieter Pauwels, Kris McGlinn, Phil Archer</td>          
+          </tr>
+          <tr>
+            <th>Usual Meeting Schedule</th>
+            <td>Teleconferences: weekly <br>
+              Face-to-face: twice annually, one of which coincides with W3C's TPAC</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="scope">
+        <h2 id="scope">Scope</h2>
+        <p>The main objective of the Building Data on the Web Working Group is to enable all stakeholders in the 
+            building life cycle to access and query required data to support their business use cases using web technologies. Its scope is then Web technologies as they may be applied to buildings (products, geometry, usage, topology).
+			<!--The Building Data on the Web WG is closely related to existing standardisation bodies and initiatives. The Building Data on the Web WG will be part of the Data Activity and is explicitly chartered to work in collaboration with BuildingSMART International, in particular, the Linked Data Working Group (LDWG).-->
+        </p>
+        <p>
+            Where relevant, it will promote Linked Data using the 
+            <a href="http://www.w3.org/DesignIssues/LinkedData.html">5 Stars of Linked Data</a> paradigm, but 
+            this will not be to the exclusion of other technologies.
+        </p>
+      </div>
+      <div class="scope">
+        <h2 id="noscope">Out of Scope</h2>
+        <p>The Building Data on the Web Working Group must be mindful of the needs of front end Web developers,
+        however, it will not develop any 3D geometric modelling or rendering technologies as they are available in common-place Building Information Modelling (BIM) or 3D geometric modelling tools. Geospatial data is out of scope as it is in the scope of the <a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>.</p>
+      </div>
+
+      <div>
+        <h2 id="deliverables">Deliverables</h2>
+
+        <p>The titles of the deliverables are not final; the Working Group will
+          have to decide on the final titles as well as the structures of the
+          documents. The Working Group may also decide to merge some
+          deliverables into one document or produce several documents that
+          together constitute one of the deliverables. <!--The ontologies of interest 
+          are linked to several data domains identified within the context of the 
+          Building Data community Group.--></p>
+
+        <ul>
+            <li><strong>Use Cases and Requirements</strong> (Note)
+                
+                <p>A document setting out the range of problems that the working group is trying to solve.</p>
+            
+            </li>
+
+            <li id="bp"><strong>Building Data on the Web Best Practices</strong> (Note)
+                <p>This will include:
+                </p>
+                <ul>
+                    <li>an agreed core building ontology (BOT) compatible with the ISO 16739 abstract model (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51622">IFC</a>) but limited to building topology and building products (walls, floors, roofs, windows, ...)</li><!--and based on existing available ontologies such as 
+                    <a href="http://www.buildingsmart-tech.org/future/linked-data/ifcowl">ifcOWL</a>, 
+                    <a href="http://www.gbxml.org/">GbXML</a> and the 
+                    <a href="http://www.opengeospatial.org/projects/groups/indoorgmlswg">IndoorGML</a>, 
+                    </li>-->
+                    <li>
+                        advice on use of URIs as identifiers in BIM systems
+                    </li>
+                    <li>
+                        advice on providing different levels of metadata for different usage scenarios 
+                    </li>
+                    <li>
+                        develop advice on, or possibly define, RESTful APIs to return data in a variety of relevant formats<!-- including those defined elsewhere, such as-->
+                    </li>
+                </ul>         
+				<p></p>
+            </li>
+            
+			<li id="bot">
+			<strong>BOT - Building Topology Ontology</strong> (Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of existing simple building ontologies to complete the development of a new core building ontology through to Recommendation status. This ontology will serve as a small and easily extendable reference ontology for this WG. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>), the geospatial domain (<a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>), and the sensor domain (<a href="https://www.w3.org/TR/vocab-ssn/">SSN</a>).</p>
+			</li>
+			
+            <!--<li id="ifc">
+            <strong>Alignment with the construction industry</strong> (Recommendation)
+			<p>The WG will work with the authors of the existing <a href="http://www.buildingsmart-tech.org/future/linked-data/ifcowl">IFC
+            Ontology in OWL</a> to align the core building ontology with the ifcOWL.</p>
+			</li>
+			
+            <li id="gis">
+            <strong>Alignment with the geospatial domain</strong> (Recommendation)
+			<p>The WG will work with the leaders of the <a href="http://www.buildingsmart-tech.org/future/linked-data/ifcowl">W3C Spatial Data on the Web Working Group</a> to align the core building ontology with their geospatial ontology.</p>
+			</li>
+			
+            <li id="sensor">
+            <strong>Alignment with the sensor domain</strong> (Recommendation)
+			<p>The WG will work with the authors of the existing <a href="https://www.w3.org/2005/Incubator/ssn/ssnx/ssn">SSN
+            Ontology in OWL</a> to align the core building ontology with their semantic sensor ontology.</p>
+			</li>-->
+			
+			
+            <!--<strong>IFC - Industry Foundation Classes </strong> (Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="http://www.buildingsmart-tech.org/future/linked-data/ifcowl">IFC
+            Ontology in OWL</a> to complete the development of this ontology through to Recommendation status.
+            Further requirements already identified in the BIM community will be taken into account.</p>-->
+            
+            <!--<strong>CityGML - GIS data</strong> (Under consideration for Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="http://cui.unige.ch/isi/onto/">CityGML
+            Ontology in OWL</a> to complete the development of this ontology through to Recommendation status.
+            Further requirements already identified in the BIM community will be taken into account.</p></li>-->
+            
+            <!--<li id="cov"><h3>Building Device Domain</h3>-->            
+<!--            <li id="device">
+			<strong>Alignment with the device and appliances domain</strong> (Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="https://sites.google.com/site/smartappliancesproject/ontologies/reference-ontology/">SAREF Ontology in OWL</a> to complete the development of this ontology through to Recommendation status. The BOT ontology will be aligned to the SAREF - Smart Appliances REFerence ontology ontology. Further requirements already identified in the building data community will be taken into account.</p>
+			</li>-->
+                         
+            <!--<strong>SSN - Sensors and Sensor Data</strong> (Under consideration for Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="https://www.w3.org/2005/Incubator/ssn/ssnx/ssn">SSN
+            Ontology in OWL</a> to complete the development of this ontology through to Recommendation status.
+            Further requirements already identified in the BIM community will be taken into account.</p>-->
+                       
+            <!--<li id="cov"><strong>DogOnt - Domotics Ontology (building control for homes)</strong> (Under consideration for Recommendation)<sup class=""></sup>-->         
+            <li id="dogont">
+            <strong>Alignment with building control and automation domain</strong> (Recommendation)
+			<p>The WG will work with the authors of the existing <a href="http://lov.okfn.org/dataset/lov/vocabs/dogont">DogOnt 
+                                Ontology in OWL</a> to complete the development of this ontology through to Recommendation status. The BOT ontology will be aligned to the DogOnt - Domotics Ontology. Further requirements already identified in the building data community will be taken into account.</p>
+			</li>
+            
+            <!--<li id="cov"><h3>Building Energy Domain</h3>-->         
+            <!--<li id="energy">
+            <strong>SimModel - Energy data</strong> (Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="http://eetd.lbl.gov/node/51892">SimModel
+            Ontology in OWL</a> to complete the development of this ontology through to Recommendation status. The core building ontology will be aligned to the SimModel ontology. Further requirements already identified in the building data community will be taken into account.</p>
+			</li>-->
+            
+            <!--<li id="cov"><h3>Building Data and Communication Domain</h3>-->			         
+            <li id="qudt">
+			<strong>Alignment with building units and measurements domain</strong> (Recommendation)<sup class=""></sup>
+            <p>The WG will work with the authors of the existing <a href="http://www.qudt.org/qudt/owl/1.0.0/">QUDT
+            Ontology in OWL</a> and <a href="http://www.opengeospatial.org/standards/om">O&amp;M model</a> to complete the development of this ontology through to Recommendation status. The BOT ontology will be aligned to the QUDT - Units ontology and the OGC O&amp;M - Observation and Measurements Ontology. Further requirements already identified in the building data community will be taken into account.</p>
+			</li>
+            
+            <!--<strong>Time Ontology in OWL</strong> (Under consideration for Recommendation)<sup class="w3c ogc">W3C, OGC</sup>
+            <p>The WG will work with the authors of the existing <a href="http://www.w3.org/TR/owl-time/">Time
+            Ontology in OWL</a> to complete the development of this widely used ontology through to Recommendation status.
+            Further requirements already identified in the BIM community will be taken into account.</p><!--</li>-->
+                
+        </ul>
+        
+        <p>Where deliverables build on prior work, any variance developed by the Building Data on the Web WG 
+        will be backwards compatible with the existing work. The aim is to formalize existing work, not to replace 
+        or compete with it.</p>
+            
+        <p>Subject to its capacity, the working group <em>may</em> choose to develop additional relevant 
+        vocabularies and specifications in response to community demand. Such additional work <em>may</em> be carried out by one or other WG
+        independently of the other.</p>
+
+      </div>
+      <div>
+        <h3>Best Practice Success Criteria</h3>
+        <p>To advance to Proposed Recommendation, evidence will be adduced that each of the best 
+          practices have been followed or recommended in at least two environments.</p>
+        <h3>Vocabulary Success Criteria</h3>
+        <p>To advance to Proposed Recommendation, evidence will be adduced that each term in the
+        vocabulary has been used in multiple environments. This will be most strictly applied to
+        terms developed by the WG, less strictly to terms originating from the prior work whose
+        use or otherwise may not be knowable.</p>
+      </div>
+      <h3>Milestones</h3>
+      <table width="80%" class="roadmap">
+        <caption> Milestones </caption>
+        <tfoot>
+          <tr>
+            <td colspan="7">Note: The group will document
+              significant changes from this initial schedule on the group home
+              page.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Deliverable</th>
+            <th><acronym title="First Working Draft">FPWD</acronym></th>
+            <th><acronym title="Last Call Working Draft">LC</acronym></th>
+            <th><acronym title="Candidate Recommendation">CR</acronym></th>
+            <th><acronym title="Proposed Recommendation">PR</acronym></th>
+            <th><acronym title="Recommendation">Rec</acronym></th>
+          </tr>
+          <tr>
+            <th>Use Cases and Requirements</th>
+            <td class="WD1">July 2017</td>
+            <td class="NOTE" colspan="4">October 2017</td>
+          </tr>
+          <tr>
+            <th>Best Practices</th>
+            <td class="WD1">August 2017</td>
+            <td class="LC">May 2018</td>
+            <td class="CR">August 2018</td>
+            <td class="PR">November 2018</td>
+            <td class="REC">April 2019</td>
+          </tr>
+
+          <tr>
+            <th>BOT ontology</th>
+            <td class="WD1">October 2017</td>
+            <td class="LC">February 2018</td>
+            <td class="CR">May 2018</td>
+            <td class="PR">August 2018</td>
+            <td class="REC">March 2019</td>
+          </tr>
+
+          <tr>
+            <th>SAREF</th>
+            <td class="WD1">December 2017</td>
+            <td class="LC">June 2018</td>
+            <td class="CR">September 2018</td>
+            <td class="PR">February 2019</td>
+            <td class="REC">September 2019</td>
+          </tr>
+
+          <tr>
+            <th>DogOnt</th>
+            <td class="WD1">December 2017</td>
+            <td class="LC">June 2018</td>
+            <td class="CR">September 2018</td>
+            <td class="PR">February 2019</td>
+            <td class="REC">September 2019</td>
+          </tr>
+
+          <tr>
+            <th>QUDT</th>
+            <td class="WD1">December 2017</td>
+            <td class="LC">June 2018</td>
+            <td class="CR">September 2018</td>
+            <td class="PR">February 2019</td>
+            <td class="REC">September 2019</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div>
+        <h3 id="timeline">Timeline View Summary</h3>
+        <ul>
+          <li>2nd April: Start Date</li>
+          <li>1st task: document best practices regarding the publication of building data and links between these data in the web (FPWD: 1 August 2017)<abbr title="First Public Working Draft">FPWD</abbr></li>
+          <li>2nd task: define and publish BOT ontology (FPWD: 1 October 2017)</li>
+          <li>3rd task: list relevant other ontologies (initial outline given above - FPWD: 1 November 2017)</li>
+          <!--<li>4th task: supply full working examples that illustrate best practices (FPWD: 1 January 2018)</li>-->
+        </ul>
+      </div>
+    </div>
+    <div class="dependencies">
+        <h2 id="coordination">Dependencies and Liaisons</h2>
+        <div>
+        <h3 id="ogc">Relationship with BuildingSMART International</h3>
+        <p>The Building Data on the Web Working Group will communicate with <a href="http://www.buildingsmart.org/">buildingSMART</a> International, which is the standardization body behind IFC, and in particular with the <a href="http://buildingsmart.org.gridhosted.co.uk/?p=4911">Linked Data Working Group (LDWG)</a> in buidingSMART International. The outcomes of the LDWG and this Building Data on the Web WG will nevertheless be different, as only the latter specifically aims at web-oriented data standards, which requires a different set-up than is currently in place in buildingSMART International. Formally, each standards body has established its own group with its own charter and operates under the respective organization's rules of membership. The 'two groups' will work together very closely and create a set of outputs that are complementary in purpose and nature (oriented either towards a web development market or towards the construction industry market), and that are expected to be adopted as standards by W3C and buildingSMART separately.</p>
+        </div>
+
+        <h3>W3C Groups</h3>
+        <p>As well as collaborating with the Linked Data Working Group (LDWG) in BuildingSMART International, 
+        the Building Data on the Web Working Group will be responsible for liaising with the following W3C groups.</p>
+        <dl>
+          <dt><a href="http://www.w3.org/2013/dwbp">Data on the Web Best Practices Working Group</a></dt>
+          <dd>Coordinate on best practices, especially in areas of potential overlap.</dd>
+          <dt><a href="http://www.w3.org/2015/spatial">Spatial Data on the Web Working Group</a></dt>
+          <dd>Ensure that the WG operates complementary to the activities of the Spatial Data on the Web Working Group.</dd>
+          <dt><a href="https://www.w3.org/International/">Internationalization Activity</a></dt>
+          <dd><span>Ensure that multilinguality concerns are properly reflected in
+              the best practices</span>. The WG should also take note of the work of the
+              <a href="https://www.w3.org/community/bpmlod/">Best Practices for Multilingual Linked Open Data</a> Community Group.</dd>
+          <dt><a href="http://www.w3.org/Privacy/">Privacy Interest Group</a></dt>
+          <dd>Ensure that the privacy concerns are properly included in the best practices.</dd>
+          <dt><a href="https://www.w3.org/2013/data/CG/wiki/Main_Page">Data Activity Coordination Group</a></dt>
+          <dd>Ensure that the WG operates in cooperation with others working in related fields.</dd>
+          <dt><a href="https://www.w3.org/WoT/">Web of Things Interest Group</a></dt>
+          <dd>Ensure that the WG takes into account best practices proposed by this Interest Group to enable a connection with the Internet of Things (IoT).</dd>
+        </dl>
+     
+
+      <h3 id="projects">Other Groups &amp; Projects</h3>
+      <dl>
+        <dt><a href="http://inspire.ec.europa.eu/"><abbr title="Infrastructure for Spatial Information in the European Community">INSPIRE</abbr></a></dt>
+        <dd>The community and standards around the European INSPIRE Directive are an important reference point for the Working Group.</dd>
+      </dl>
+
+      <div id="conformance">
+        <p>Furthermore, the Building Data on the Web Working Group expects to follow these W3C Recommendations:</p>
+        <ul>
+          <li><a href="https://www.w3.org/TR/qaframe-spec/">QA Framework: Specification Guidelines</a>.</li>
+          <li><a href="https://www.w3.org/TR/charmod/">Character Model for the World Wide Web 1.0: Fundamentals</a></li>
+          <li><a href="https://www.w3.org/TR/webarch/">Architecture of the World Wide Web, Volume I</a></li>
+        </ul>
+      </div>
+    </div>
+	
+    <div class="participation">
+      <h2 id="participation">Participation</h2>
+      <p>To be successful, the Building Data on the Web Working Group is
+        expected to have 20 or more active participants for its duration. To get
+        the most out of this work, participants should expect to devote several
+        hours a week; for budgeting purposes, we recommend at least half a day a
+        week. For chairs and document editors the commitment will be higher,
+        say, 1-2 days a week. Participants who follow the work less closely
+        should be aware that if they miss decisions through inattention further
+        discussion of those issues may be ruled out of order. However, most
+        participants follow some areas of discussion more closely than others,
+        and the time needed to stay in good standing therefore varies from week
+        to week. The Working Group will also allocate the necessary resources
+        for building Test Suites for each specification.</p>
+    </div>
+    <div class="communication">
+      <h2 id="communication">Communication</h2>
+      <p>This group primarily conducts its work on the <a href="mailto:">public mailing list</a> 
+      [<a href="http:">archive</a>]. Administrative tasks may be conducted
+        in <a href="mailto:">Member-only</a> communications [<a href="https:">archive</a>].
+        Comments on the group's work will be welcome via
+        <a href="mailto:">2bdecided@w3.org</a>
+ [<a href="mailto:public-sdw-comments-request@w3.org?subject=subscribe">subscribe</a>] 
+ [<a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/">archive</a>]</p>
+      <p>Information about the group (deliverables, participants, face-to-face
+        meetings, teleconferences, etc.) is available from the <a href="http://phaedrus.scss.tcd.ie/buildviz/lbdw/">Building Data on the Web Working Group</a> home page.</p>
+    </div>
+    <div class="decisions">
+      <h2 id="decisions">Decision Policy</h2>
+      <p>As explained in the Process Document (<a href="https://www.w3.org/Consortium/Process/policies#Consensus">section
+          3.3</a>), this group will seek to make decisions when there is
+        consensus. When the Chair puts a question and observes dissent, after
+        due consideration of different opinions, the Chair should record a
+        decision (possibly after a formal vote) and any objections, and move on.
+        <br>
+        <br>
+        A formal vote should allow for remote asynchronous participation-using,
+        for example, email and/or web-based survey techniques. Any resolution
+        taken in a face-to-face meeting or teleconference is to be considered
+        provisional until 5 working days after the publication of the resolution
+        in draft minutes sent to the group's mailing list. </p>
+      <p>This charter is written in accordance with <a href="https://www.w3.org/Consortium/Process/policies#Votes">Section
+          3.4, Votes</a> of the W3C Process Document and includes no voting
+        procedures beyond what the Process Document requires. </p>
+    </div>
+    <div class="patent">
+      <h2 id="patentpolicy">Patent Policy </h2>
+      <p>This Working Group operates under the <a href="http://www.w3.org/2014/Process-20140801/">W3C
+          Patent Policy</a> (1 August 2014 Version). To promote the widest
+        adoption of Web standards, W3C seeks to issue Recommendations that can
+        be implemented, according to this policy, on a Royalty-Free basis.</p>
+
+      <p>For more information about disclosure obligations for this group,
+        please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent
+          Policy Implementation</a>.</p>
+    </div>
+    <h2 id="about">About this Charter</h2>
+    <p>This charter for the Building Data on the Web Working Group has
+      been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section
+        6.2</a> of the <a href="https://www.w3.org/Consortium/Process/">Process
+        Document</a>. In the event of a conflict between this document or the
+      provisions of any charter and the W3C Process, the W3C Process shall take
+      precedence.</p>
+
+    <hr>
+    <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/2002/ipr-notice-20021231#Copyright" rel="Copyright">Copyright</a> © 2016 <a href="https://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a>,
+      All Rights Reserved.</p>
+
+<script type="text/javascript" src="./index_files/svgeezy.js.téléchargement"></script>
+
+  
+
+</body></html>
