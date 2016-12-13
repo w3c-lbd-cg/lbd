@@ -57,18 +57,18 @@ bot:name
       rdfs:range xsd:string .
 
 bot:Building
-      a       owl:class ;
+      a       owl:Class ;
       rdfs:comment "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en , "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ;
       rdfs:label "Building"@en , "Bygning"@da ;
       owl:sameAs dbo:Building .
 
 bot:Element
-      a       owl:class ;
+      a       owl:Class ;
       rdfs:comment "Bestanddel af et bygværk med en karakteristisk funktion, form eller position"@da , "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ;
       rdfs:label "Building element"@en , "Bygningsdel"@da .
 
 bot:Storey
-      a       owl:class ;
+      a       owl:Class ;
       rdfs:comment "Et plan i en bygning"@da , "A level part of a building"@en ;
       rdfs:label "Storey"@en , "Etage"@da .
 
@@ -86,7 +86,7 @@ bot:description
       rdfs:range xsd:string .
 
 bot:Space
-      a       owl:class ;
+      a       owl:Class ;
       rdfs:comment "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en , "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ;
       rdfs:label "Space"@en , "Rum"@da .
 
