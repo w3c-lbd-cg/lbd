@@ -1,0 +1,131 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dce:    <http://purl.org/dc/elements/1.1/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix cc:     <http://creativecommons.org/ns#> .
+@prefix bot:    <https://w3id.org/bot#> .
+@prefix inst:   <http://example.com/test/> .
+
+#################################
+# METADATA
+#################################
+<https://w3id.org/bot> a owl:Ontology ;
+        owl:versionInfo "November 23rd 2016"^^xsd:string ;
+        dce:modified    "November 23rd 2016"^^xsd:string ;
+        rdfs:comment    "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building. BOT should be extended for domain specific purposes such as home automation, indoor navigation, smart cities, etc."@en ,
+                        "BygningsTopologiOntologien (BOT) er en simpel ontologi, som definerer kernekoncepterne i en bygning. BOT bør udvides til fagspecifikke formål som for eksempel home automation, indendørs navigation, smart cities mv."@da ;
+        cc:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dce:creator     "Mads Holten Rasmussen (mhoras@byg.dtu.dk)" ,
+                        "Pieter Pauwels (pipauwel.pauwels@ugent.be)" ;
+        dce:description "A simple ontology describing the topology of a building" ;
+        dce:identifier  "BOT" ;
+        dce:Language    "en" ;
+        dce:title       "BOT" ;
+        vann:preferredNamespacePrefix "bot" ;
+        vann:preferredNamespaceUri "https://w3id.org/bot#" .
+
+#################################
+# CLASSES
+#################################
+bot:Building a owl:Class ;
+        owl:sameAs      dbo:Building ;
+        rdfs:label      "Building"@en ,
+                        "Bygning"@da ;
+        rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
+                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
+bot:Storey a owl:Class ;
+        rdfs:label      "Storey"@en ,
+                        "Etage"@da ;
+        rdfs:comment    "A level part of a building"@en ,
+                        "Et plan i en bygning"@da .
+bot:Element a owl:Class ;
+        rdfs:label      "Building element"@en ,
+                        "Bygningsdel"@da ;
+        rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
+                        "Bestanddel af et bygværk med en karakteristisk funktion, form eller position"@da .
+bot:Space a owl:Class ;
+        rdfs:label      "Space"@en ,
+                        "Rum"@da ;
+        rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
+                        "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da .
+
+#################################
+# OBJECT PROPERTIES
+#################################
+bot:hasStorey a owl:ObjectProperty ;
+        rdfs:label      "Has storey"@en ,
+                        "Har etage"@da ;
+        rdfs:comment    "Relation to storeys contained in the building."@en ,
+                        "Relation til etager indeholdt i bygningen."@da ;
+        rdfs:domain     bot:Building ;
+        rdfs:range      bot:Storey .
+bot:hasSpace a owl:ObjectProperty ;
+        rdfs:label      "Has space"@en ,
+                        "Har rum"@da ;
+        rdfs:comment    "Relation to spaces whose plan is located at the storey."@en ,
+                        "Relation til rum, hvis plan er placeret på etagen."@da ;
+        rdfs:domain     bot:Storey ;
+        rdfs:range      bot:Space .
+bot:adjacentElement a owl:ObjectProperty ;
+        rdfs:label      "Adjacent element"@en ,
+                        "Tilstødende element"@da ;
+        rdfs:comment    "Relation to building elements bounding a physical space"@en ,
+                        "Relation til bygningsdele, som afgrænser et fysisk rum"@da ;
+        rdfs:domain     bot:Space ;
+        rdfs:range      bot:Element .
+bot:containsElement a owl:ObjectProperty ;
+        rdfs:label      "Contained in"@en ,
+                        "Indeholdt i"@da ;
+        rdfs:comment    "Relation to a building element contained in a space"@en ,
+                        "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
+        rdfs:domain     bot:Space ;
+        rdfs:range      bot:Element .
+bot:hasElement a owl:ObjectProperty ;
+        rdfs:label      "Has element"@en ,
+                        "Har bygningsdel"@da ;
+        rdfs:comment    "Relation to elements belonging to a building or a storey."@en ,
+                        "Relation til elementer, hørende til en en bygning eller en etage."@da ;
+        rdfs:domain     owl:Thing ;
+        rdfs:range      bot:Element ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ,
+                                ( bot:hasStorey bot:hasSpace bot:adjacentElement ) ,
+                                ( bot:hasSpace bot:containsElement ) ,
+                                ( bot:hasStorey bot:hasSpace bot:containsElement ) .
+
+#################################
+# CONSTRAINTS
+#################################
+# Disjunctive classes
+[] a owl:AllDisjointClasses ;
+        owl:members
+              ( bot:Element
+                bot:Space
+                bot:Storey
+                bot:Building ) .
+
+#################################
+# INDIVIDUALS
+#################################
+inst:BuildingA a bot:Building ;
+        rdfs:label              "Building A"@en ;
+        bot:hasStorey           inst:Storey1 ,
+                                inst:Storey2 .
+inst:Storey1 a bot:Storey ;
+        rdfs:label              "Storey 1"@en ;
+        bot:hasSpace            inst:RoomA .
+inst:Storey2 a bot:Storey ;
+        rdfs:label              "Storey 2"@en .
+inst:RoomA a bot:Space ;
+        rdfs:label              "Room A"@en ;
+        bot:adjacentElement     inst:Wall1 ,
+                                inst:Door1 ;
+        bot:containsElement     inst:Table .
+inst:Wall1 a bot:Element ;
+        rdfs:label              "Wall 1"@en .
+inst:Door1 a bot:Element ;
+        rdfs:label              "Door 1"@en .
+inst:Table a bot:Element ;
+        rdfs:label              "Table"@en .
