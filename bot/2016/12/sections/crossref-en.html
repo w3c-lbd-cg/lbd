@@ -1,0 +1,522 @@
+<h2  id="crossreference" class="list">Cross reference for BOT classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BOT.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+      </li>
+      <li>
+         <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+      </li>
+      <li>
+         <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+      </li>
+      <li>
+         <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+      </li>
+   </ul>
+   <div class="entity" id="Building">
+      <h3>Building<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Building</p>
+      <div class="comment">
+         <span class="markdown">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://example.com/test/BuildingA" title="http://example.com/test/BuildingA">Building A</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is same as</dt>
+         <dd>
+            <span class="dotted" title="http://dbpedia.org/ontology/Building">building</span>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>named individual</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Element">
+      <h3>Building element<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Element</p>
+      <div class="comment">
+         <span class="markdown">Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasElement" title="https://w3id.org/bot#hasElement">Has element</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://example.com/test/Door1" title="http://example.com/test/Door1">Door 1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://example.com/test/Table" title="http://example.com/test/Table">Table</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://example.com/test/Wall1" title="http://example.com/test/Wall1">Wall 1</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Space">
+      <h3>Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Space</p>
+      <div class="comment">
+         <span class="markdown">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://example.com/test/RoomA" title="http://example.com/test/RoomA">Room A</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Storey">
+      <h3>Storey<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Storey</p>
+      <div class="comment">
+         <span class="markdown">A level part of a building</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://example.com/test/Storey1" title="http://example.com/test/Storey1">Storey 1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://example.com/test/Storey2" title="http://example.com/test/Storey2">Storey 2</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+      </li>
+      <li>
+         <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+      </li>
+      <li>
+         <a href="#hasElement" title="https://w3id.org/bot#hasElement">Has element</a>
+      </li>
+      <li>
+         <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+      </li>
+      <li>
+         <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+      </li>
+   </ul>
+   <div class="entity" id="adjacentElement">
+      <h3>Adjacent element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#adjacentElement</p>
+      <div class="comment">
+         <span class="markdown">Relation to building elements bounding a physical space</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containsElement">
+      <h3>Contained in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#containsElement</p>
+      <div class="comment">
+         <span class="markdown">Relation to a building element contained in a space</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasElement">
+      <h3>Has element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasElement</p>
+      <div class="comment">
+         <span class="markdown">Relation to elements belonging to a building or a storey.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSpace">
+      <h3>Has space<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasSpace</p>
+      <div class="comment">
+         <span class="markdown">Relation to spaces whose plan is located at the storey.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStorey">
+      <h3>Has storey<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasStorey</p>
+      <div class="comment">
+         <span class="markdown">Relation to storeys contained in the building.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://dbpedia.org/ontology/Building" title="http://dbpedia.org/ontology/Building">
+            <span>building</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/BuildingA" title="http://example.com/test/BuildingA">Building A</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/Door1" title="http://example.com/test/Door1">Door 1</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/RoomA" title="http://example.com/test/RoomA">Room A</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/Storey1" title="http://example.com/test/Storey1">Storey 1</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/Storey2" title="http://example.com/test/Storey2">Storey 2</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/Table" title="http://example.com/test/Table">Table</a>
+      </li>
+      <li>
+         <a href="#http://example.com/test/Wall1" title="http://example.com/test/Wall1">Wall 1</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://dbpedia.org/ontology/Building">
+      <h3>building<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/ontology/Building</p>
+      <dl class="description">
+         <dt>is same as</dt>
+         <dd>
+            <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/BuildingA">
+      <h3>Building A<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/BuildingA</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Building" title="https://w3id.org/bot#Building">Building</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/Storey1" title="http://example.com/test/Storey1">Storey 1</a>
+         </dd>
+         <dd>
+            <a href="#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/Storey2" title="http://example.com/test/Storey2">Storey 2</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/Door1">
+      <h3>Door 1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/Door1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/RoomA">
+      <h3>Room A<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/RoomA</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Space" title="https://w3id.org/bot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/Door1" title="http://example.com/test/Door1">Door 1</a>
+         </dd>
+         <dd>
+            <a href="#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/Table" title="http://example.com/test/Table">Table</a>
+         </dd>
+         <dd>
+            <a href="#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/Wall1" title="http://example.com/test/Wall1">Wall 1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/Storey1">
+      <h3>Storey 1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/Storey1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://example.com/test/RoomA" title="http://example.com/test/RoomA">Room A</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/Storey2">
+      <h3>Storey 2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/Storey2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/Table">
+      <h3>Table<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/Table</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://example.com/test/Wall1">
+      <h3>Wall 1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.com/test/Wall1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Element" title="https://w3id.org/bot#Element">Building element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div>
