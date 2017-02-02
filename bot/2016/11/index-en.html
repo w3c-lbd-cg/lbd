@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://w3id.org/bot/index-en.html -->
+<html prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ <link rel="stylesheet" href="./common/primer.css" media="screen">    <link rel="stylesheet" href="./common/rec.css" media="screen">    <link rel="stylesheet" href="./common/extra.css" media="screen">    <link rel="stylesheet" href="./common/owl.css" media="screen">   <script src="./common/jquery.js.téléchargement"></script> 
+<script src="./common/marked.min.js.téléchargement"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+		}
+		t = t.replace(' back to ToC','');
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body resource="https://w3id.org/bot" typeof="owl:Ontology schema:TechArticle">
+<span resource="" typeof="foaf:Document schema:WebPage">
+<span property="dc:created schema:dateCreated" content="23 November 2016"></span>
+<span property="dc:isVersionOf prov:specializationOf" resource="https://w3id.org/bot"></span>
+<span property="prov:alternateOf prov:revisionOf" resource="https://w3id.org/bot"></span>
+<span property="dc:contributor prov:wasAttributedTo schema:contributor" resource="http://purl.org/net/dgarijo"></span>
+</span>
+<div class="container"><div class="head">
+<div style="float:right">language <a href="https://w3id.org/bot/index-en.html"><b>en</b></a> <a href="https://w3id.org/bot/index-da.html"><b>da</b></a> </div>
+<h1 property="dc:title schema:name">Building Topology Ontology (BOT)</h1>
+<span property="dc:modified schema:dateModified" content="23 November 2016"></span>
+<h2>Release  23 November 2016</h2>
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/bot/2016/11/bot">https://w3id.org/bot/2016/11/bot</a></dd>
+</dl><dl><dt>Latest version:</dt>
+<dd><a href="https://w3id.org/bot">https://w3id.org/bot</a></dd>
+</dl><dl>
+<dt>Previous version:</dt>
+<dd><a property="schema:significantLink prov:wasRevisionOf" href="http://www.student.dtu.dk/~mhoras/bot">http://www.student.dtu.dk/~mhoras/bot</a></dd>
+</dl>
+<dt>Revision:</dt>
+<dd property="schema:version">-</dd>
+<dl><dt>Authors:</dt>
+<dd>Mads Holten Rasmussen (mhoras@byg.dtu.dk), (<a href="http://www.dtu.dk/">DTU</a>)</dd><dd>Pieter Pauwels (pipauwel.pauwels@ugent.be), (<a href="http://www.ugent.be/">UGent</a>)</dd></dl>
+
+<dl><dt>Publisher:</dt>
+<dd><a property="dc:publisher schema:publisher prov:wasAttributedTo" resource="null" href="./common/null">agent0</a>, (<a href="./common/null">DTU</a>)</dd></dl>
+<dl><dt>Download serialization:</dt><dd><span><a href="https://w3id.org/bot/bot.rdf" target="_blank"><img src="./common/XML-blue.svg" alt="RDF/XML"></a> </span><span><a href="https://w3id.org/bot/bot.n3" target="_blank"><img src="./common/Format-N_Triples-blue.svg" alt="N-Triples"></a> </span><span><a href="https://w3id.org/bot/bot.ttl" target="_blank"><img src="./common/Format-TTL-blue.svg" alt="TTL"></a> </span></dd></dl><dl><dt>License: </dt><dd><a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank"><img src="./common/License-Creative Commons Attribution 3.0 Unported-blue.svg" alt="https://creativecommons.org/licenses/by/3.0/"></a>
+<span property="dc:license" resource="https://creativecommons.org/licenses/by/3.0/"></span>
+<a property="dc:rights" href="https://creativecommons.org/licenses/by/3.0/" rel="license" target="_blank">
+<img src="./common/null" style="border-width:0" alt="License">
+</a>
+<br></dd></dl><dl><dt>Visualization:</dt><dd><a href="http://vowl.visualdataweb.org/webvowl/index.html#iri=https://w3id.org/bot#" target="_blank"><img src="./common/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl"></a></dd></dl>
+<hr>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><p>The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building. BOT should be extended for domain specific purposes such as home automation, indoor navigation, smart cities, etc.</p></div>
+<div id="toc"><h2>Table of contents</h2><ul><li>1. <a href="https://w3id.org/bot/index-en.html#intro">Introduction </a></li><ul><li>1.1. <a href="https://w3id.org/bot/index-en.html#ns">Namespace declarations</a></li></ul><li>2. <a href="https://w3id.org/bot/index-en.html#overv">BOT: Overview </a></li><li>3. <a href="https://w3id.org/bot/index-en.html#desc">BOT: Description </a></li><li>4. <a href="https://w3id.org/bot/index-en.html#crossreference">Cross reference for BOT classes, properties and dataproperties </a></li><ul><li>4.1. <a href="https://w3id.org/bot/index-en.html#properties">Object Properties</a></li><li>4.2. <a href="https://w3id.org/bot/index-en.html#dataproperties">Data Properties</a></li><li>4.3. <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individuals</a></li></ul><li>5. <a href="https://w3id.org/bot/index-en.html#ref">References </a></li><li>6. <a href="https://w3id.org/bot/index-en.html#ack">Acknowledgements </a></li></ul></div>     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+<p>This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</p>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="https://w3id.org/bot/index-en.html#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>~mhoras</b></td><td>&lt;http://www.student.dtu.dk/~mhoras/&gt;</td></tr>
+<tr><td><b>ns</b></td><td>&lt;http://creativecommons.org/ns#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;http://dbpedia.org/ontology/&gt;</td></tr>
+<tr><td><b>bot</b></td><td>&lt;https://w3id.org/bot#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+     <div id="overview"><h2 id="overv" class="list">BOT: Overview <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+<p>This ontology has the following classes and properties.</p>
+<h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#hasElement" title="https://w3id.org/bot#hasElement">Has element</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#description" title="https://w3id.org/bot#description">Description</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#id" title="https://w3id.org/bot#id">Id</a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#name" title="https://w3id.org/bot#name">Name</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#http://dbpedia.org/ontology/Building" title="http://dbpedia.org/ontology/Building">
+         <span>building</span>
+      </a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#Building" title="https://w3id.org/bot#Building">
+         <span>Building</span>
+      </a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#Element" title="https://w3id.org/bot#Element">
+         <span>Building element</span>
+      </a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#Space" title="https://w3id.org/bot#Space">
+         <span>Space</span>
+      </a>
+   </li>
+   <li>
+      <a href="https://w3id.org/bot/index-en.html#Storey" title="https://w3id.org/bot#Storey">
+         <span>Storey</span>
+      </a>
+   </li>
+</ul></div>
+     <div id="description"><h2 id="desc" class="list">BOT: Description <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+<p>This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</p>
+</div>
+     <div id="crossref"><h2 id="crossreference" class="list">Cross reference for BOT classes, properties and dataproperties <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BOT.
+<div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#hasElement" title="https://w3id.org/bot#hasElement">Has element</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+      </li>
+   </ul>
+   <div class="entity" id="adjacentElement">
+      <h3>Adjacent element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#adjacentElement</p>
+      <div class="comment">
+         <p>Relation to building elements bounding a physical space</p>
+
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Space">Space</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Element">Building element</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containsElement">
+      <h3>Contained in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#containsElement</p>
+      <div class="comment">
+         <p>Relation to a building element contained in a space</p>
+
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Space">Space</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Element">Building element</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasElement">
+      <h3>Has element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasElement</p>
+      <div class="comment">
+         <p>Relation to elements belonging to a building or a storey.</p>
+
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Element">Building element</span>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="https://w3id.org/bot/index-en.html#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="https://w3id.org/bot/index-en.html#hasStorey" title="https://w3id.org/bot#hasStorey">Has storey</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#containsElement" title="https://w3id.org/bot#containsElement">Contained in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="https://w3id.org/bot/index-en.html#hasSpace" title="https://w3id.org/bot#hasSpace">Has space</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="https://w3id.org/bot/index-en.html#adjacentElement" title="https://w3id.org/bot#adjacentElement">Adjacent element</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSpace">
+      <h3>Has space<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasSpace</p>
+      <div class="comment">
+         <p>Relation to spaces whose plan is located at the storey.</p>
+
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Storey">Storey</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Space">Space</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStorey">
+      <h3>Has storey<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#hasStorey</p>
+      <div class="comment">
+         <p>Relation to storeys contained in the building.</p>
+
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Building">Building</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Storey">Storey</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#description" title="https://w3id.org/bot#description">Description</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#id" title="https://w3id.org/bot#id">Id</a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#name" title="https://w3id.org/bot#name">Name</a>
+      </li>
+   </ul>
+   <div class="entity" id="description">
+      <h3>Description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#description</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="id">
+      <h3>Id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#id</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#long">long</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>Name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#name</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#http://dbpedia.org/ontology/Building" title="http://dbpedia.org/ontology/Building">
+            <span>building</span>
+         </a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#Building" title="https://w3id.org/bot#Building">
+            <span>Building</span>
+         </a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#Element" title="https://w3id.org/bot#Element">
+            <span>Building element</span>
+         </a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#Space" title="https://w3id.org/bot#Space">
+            <span>Space</span>
+         </a>
+      </li>
+      <li>
+         <a href="https://w3id.org/bot/index-en.html#Storey" title="https://w3id.org/bot#Storey">
+            <span>Storey</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://dbpedia.org/ontology/Building">
+      <h3>building<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/ontology/Building</p>
+      <dl class="description">
+         <dt>is same as</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#d5e244" title="https://w3id.org/bot#Building">Building</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Building">
+      <h3>Building<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Building</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#class">class</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is same as</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#http://dbpedia.org/ontology/Building" title="http://dbpedia.org/ontology/Building">building</a>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#d5e261" title="https://w3id.org/bot#Element">Building element</a>, <a href="https://w3id.org/bot/index-en.html#d5e279" title="https://w3id.org/bot#Space">Space</a>, <a href="https://w3id.org/bot/index-en.html#d5e296" title="https://w3id.org/bot#Storey">Storey</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Element">
+      <h3>Building element<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Element</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#class">class</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#d5e244" title="https://w3id.org/bot#Building">Building</a>, <a href="https://w3id.org/bot/index-en.html#d5e279" title="https://w3id.org/bot#Space">Space</a>, <a href="https://w3id.org/bot/index-en.html#d5e296" title="https://w3id.org/bot#Storey">Storey</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Space">
+      <h3>Space<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Space</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#class">class</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#d5e244" title="https://w3id.org/bot#Building">Building</a>, <a href="https://w3id.org/bot/index-en.html#d5e261" title="https://w3id.org/bot#Element">Building element</a>, <a href="https://w3id.org/bot/index-en.html#d5e296" title="https://w3id.org/bot#Storey">Storey</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Storey">
+      <h3>Storey<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a> or <a href="https://w3id.org/bot/index-en.html#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Storey</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#class">class</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="https://w3id.org/bot/index-en.html#d5e244" title="https://w3id.org/bot#Building">Building</a>, <a href="https://w3id.org/bot/index-en.html#d5e261" title="https://w3id.org/bot#Element">Building element</a>, <a href="https://w3id.org/bot/index-en.html#d5e279" title="https://w3id.org/bot#Space">Space</a>
+         </dd>
+      </dl>
+   </div>
+</div></div>
+     <div id="references"><h2 id="ref" class="list">References <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+<p>Add your references here. It is recommended to have them as a list.</p>
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="https://w3id.org/bot/index-en.html#toc">ToC</a></span></h2>
+<p>The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+ 
+</div></body></html>
