@@ -110,9 +110,8 @@ bot:hasElement a owl:ObjectProperty ;
         rdfs:domain     owl:Thing ;
         rdfs:range      bot:Element ;
         owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ,
-                                ( bot:hasStorey bot:hasSpace bot:adjacentElement ) ,
-                                ( bot:hasSpace bot:containsElement ) ,
-                                ( bot:hasStorey bot:hasSpace bot:containsElement ) .
+                                ( bot:hasStorey bot:hasElement ) ,
+                                ( bot:hasSpace bot:containsElement ) .
 
 #################################
 # CONSTRAINTS
