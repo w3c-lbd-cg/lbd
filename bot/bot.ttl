@@ -32,21 +32,21 @@
 #################################
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
-						"Gebäude"@de ,
+			"Gebäude"@de ,
                         "Bygning"@da ;
         rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
 						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
                         "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
 bot:Storey a owl:Class ;
         rdfs:label      "Storey"@en ,
-						"Geschoss (Architektur)"@de ,
+			"Geschoss (Architektur)"@de ,
                         "Etage"@da ;
         rdfs:comment    "A level part of a building"@en ,
 						"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
                         "Et plan i en bygning"@da .
 bot:Element a owl:Class ;
         rdfs:label      "Building element"@en ,
-						"Bauteil (Bauwesen)"@de ,
+			"Bauteil (Bauwesen)"@de ,
                         "Bygningsdel"@da ;
         rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
 						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird"@de ,
@@ -82,19 +82,19 @@ bot:hasSpace a owl:ObjectProperty ;
         rdfs:range      bot:Space .
 bot:adjacentElement a owl:ObjectProperty ;
         rdfs:label      "Adjacent element"@en ,
-						"Benachbartes Bauteil"@de ,
+			"Benachbartes Bauteil"@de ,
                         "Tilstødende element"@da ;
-        rdfs:comment    "Relation to building elements bounding a physical space"@en ,
-						"Beziehung zu Bauteilen, die einen Raum physisch begrenzen"@de ,
+        rdfs:comment    "Relation of a space to its bounding building elements"@en ,
+			"Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
                         "Relation til bygningsdele, som afgrænser et fysisk rum"@da ;
         rdfs:domain     bot:Space ;
         rdfs:range      bot:Element .
 bot:containsElement a owl:ObjectProperty ;
-        rdfs:label      "Contained in"@en ,
-                        "Enthalten in"@de ,
+        rdfs:label      "Contains"@en ,
+                        "Enthält"@de ,
                         "Indeholdt i"@da ;
-        rdfs:comment    "Relation to a building element contained in a space"@en ,
-                        "Beziehung zu einem Bauteil das in einem Raum enthalten ist"@de ,
+        rdfs:comment    "Relation of a space to a building element"@en ,
+                        "Beziehung eines Raums zu einem Bauteil"@de ,
                         "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
         rdfs:domain     bot:Space ;
         rdfs:range      bot:Element .
