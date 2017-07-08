@@ -1,0 +1,63 @@
+@prefix : <https://w3id.org/bot/SAREFAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix liner: <https://w3id.org/liner/>.
+@prefix qb: <http://purl.org/linked-data/cube#>.
+@prefix bot: <https://w3id.org/bot/> .
+@base <https://w3id.org/bot/SAREFAlignment> .
+
+<https://w3id.org/bot/SAREFAlignment> rdf:type owl:Ontology ;
+	dcterms:title "SAREF alignment."@en ;
+	dcterms:description """This ontology defines proposed alignemnts with the SAREF and SAREF4bldg ontology."""@en ;
+	dcterms:issued "2017-07-08"^^xsd:date ;
+	dcterms:modified "2017-07-08"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:contributor <https://www.researchgate.net/profile/Mads_Holten_Rasmussen> ;
+	dcterms:contributor <https://www.researchgate.net/profile/Pieter_Pauwels> ;
+	vann:preferredNamespacePrefix "bot" ;
+	vann:preferredNamespaceUri <https://w3id.org/bot/> ;  
+	 owl:imports <https://w3id.org/bot> ,
+                                                   <https://w3id.org/def/v1/saref4bldg> ,
+                                                   <https://w3id.org/saref> .
+
+# Object properties and Classes									   
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+											   
+#################################################################
+#    Object Properties
+#################################################################
+
+<https://w3id.org/bot#containsElement> owl:equivalentProperty <https://w3id.org/def/saref4bldg#contains> .
+<https://w3id.org/bot#hasSpace> owl:equivalentProperty <https://w3id.org/def/saref4bldg#hasSpace> .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+<https://w3id.org/bot#Building> owl:equivalentClass <https://w3id.org/def/saref4bldg#Building> .
+<https://w3id.org/bot#Space> owl:equivalentClass <https://w3id.org/def/saref4bldg#BuildingSpace> .
+<https://w3id.org/bot#Element> rdfs:subClassOf <https://w3id.org/def/saref4bldg#PhysicalObject> .
+
