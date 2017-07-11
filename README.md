@@ -1,5 +1,5 @@
-# The Linked Building Data (on the Web) Community Group - lbdw
-This repository contains the sources of the W3C Linked Building Data (on the Web) Community Group website https://w3c-lbd-cg.github.io/lbdw/
+# The Linked Building Data (on the Web) Community Group - lbd
+This repository contains the sources of the W3C Linked Building Data (on the Web) Community Group website https://w3c-lbd-cg.github.io/lbd/
 
 ## How to Get Involved
 
@@ -12,8 +12,8 @@ This repository contains the sources of the W3C Linked Building Data (on the Web
 
 Recommended pattern for github workflow for W3C spec drafting (from W3C SDW group's wiki):
 
-* create a local copy of the W3C SDW repo: `git clone https://github.com/w3c-lbd-cg/lbdw.git`
-* configure remotes on local - specify the W3C repo remote as `upstream:  `git remote add upstream https://github.com/w3c-lbd-cg/lbdw.git`
+* create a local copy of the W3C SDW repo: `git clone https://github.com/w3c-lbd-cg/lbd.git`
+* configure remotes on local - specify the W3C repo remote as `upstream:  `git remote add upstream https://github.com/w3c-lbd-cg/lbd.git`
 * Fetch the branches and their respective commits from the upstream repository: `git fetch upstream`
 * because we're using GitHub Pages for publication, `gh-pages` is our main branch
 * create a branch in your local repo which tracks `gh-pages` in upstream: `git checkout -b {my-branch-name} upstream/gh-pages`
@@ -25,7 +25,7 @@ Alternatively - send your text to the Editors (Kris, Pieter, Maxime) via the CG 
 
 #### EDITORS ONLY: 
 
-* within GitHub, Merge the changes into gh-pages ... then you will see your stuff @ http://w3c-lbd-cg.github.io/lbdw/
+* within GitHub, Merge the changes into gh-pages ... then you will see your stuff @ http://w3c-lbd-cg.github.io/lbd/
 * Bring all those changes back into your local repo: `git fetch upstream`
 * rebase (don't 'pull' - because this creates another commit) changes on your branch: `git rebase upstream/gh-pages`
 
