@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<https://w3id.org/bot/2016/12/bot> a prov:Entity;
+	 dc:title "Building Topology Ontology (BOT)";
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Mads Holten Rasmussen (mhoras@byg.dtu.dk)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Pieter Pauwels (pipauwel.pauwels@ugent.be)".];
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/bot>;
+	 prov:wasRevisionOf <https://w3id.org/bot/2016/11/bot>;
+	 prov:wasGeneratedAt "13 December 2016";
+.
