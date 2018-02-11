@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Linked Building Data Community Group Use Cases &amp; Requirements</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove" src="config.js"></script>
+  <style type="text/css">
+  .contributor:before {
+    content: "Contributed by: ";
+    font-weight: bold;
+  }
+  .relatedDeliverables:before {
+    content: "Related deliverables: ";
+    font-weight: bold;
+  }
+  .relatedRequirements:before {
+    content: "Related requirements: ";
+    font-weight: bold;
+  }
+  .relatedUseCases:before {
+    content: "Related use cases: ";
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+  .toggleVis {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .expandOrCollapse {
+    font-weight: bold;
+  }
+  </style> 
+  <script type="text/javascript">
+    // This is the script that hides/shows the full descriptions of the use cases
+    // The default is visible so that they're accessible without scripting
+    // Init makes them all hidden and writes in the toggle link
+
+    window.onload = init;
+
+    function init() {
+      var divs = document.getElementsByTagName("div");
+      for (var i = 0; i < divs.length - 1; i++ ) {
+        if ((divs[i+1]) && (divs[i+1].className=='visible')) {
+          divs[i+1].className = 'hidden';
+          divs[i].innerHTML = '&#9654; Full use case description (click to expand):';
+        }
+      }
+    }
+
+    // And here's the toggle function
+
+    function toggleVisibility(elem) { // expand or collapse the next div
+      var divs = document.getElementsByTagName("div");
+      for(var i = 0; i < divs.length;i++) // find the next div element
+        if(divs[i] == elem) {
+          var item = divs[i + 1];
+        }
+      if (item) {
+        if (item.className=='hidden') {
+          item.className = 'visible';
+          elem.innerHTML = '&#9650; Full use case description (click to collapse):';
+        } else {
+          item.className = 'hidden';
+          elem.innerHTML = '&#9654; Full use case description (click to expand):';
+        }
+      }
+    }
+
+  </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
+    </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        This document describes use cases that demand a combination of linked data technologies for the building domain. It underpins the collaborative work of the 
+        <a href="https://www.w3.org/community/lbd/">Linked Building Data Community Group</a> operated by the <a href="http://www.w3.org/">W3C</a>. 
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        The mission of the <a href="https://www.w3.org/community/lbd/">Linked Building Data Community Group</a>, as described in its <a href="https://w3c-lbd-cg.github.io/lbd/charter/">charter</a>, is to enable all stakeholders in the building life cycle to access and query required data to support their business use cases using web technologies. Its scope is then Web technologies as they may be applied to buildings (products, geometry, usage, topology). Infrastructure data (bridges, roads, railroads).
+      </p>
+      <p>This document describes the results of the first steps of working towards this goal. Members of the Community Group and other stakeholders have come up with a number of <a href="#UseCases">use cases</a> that describe how linked data can be used in the building life cycle. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the Community Group.</p>
+      <p>The requirements described in this document will be the basis for development of the other deliverables of the Community Group.</p>
+    </section>
+
+    <section id="Deliverables">
+      <h2>Deliverables</h2>
+      <p>The deliverables of this Community Group are described in the <a href="https://w3c-lbd-cg.github.io/lbd/charter/">Community Group Charter</a>. For convenience those deliverables are replicated in this chapter. The charter remains the authoritative source of the definition of deliverables.</p>
+      <section id="UseCasesAndRequirements">
+        <h3>Use Cases and Requirements</h3>
+        <p>A document setting out the range of problems that the Community Group is trying to solve (this document).</p>
+      </section>
+      <section id="bdw-bp">
+        <h3>Linked Building Data on the Web Best Practices</h3>
+        <p>This will include:</p>
+              <ul>
+                <li>documentation of an agreed core building topology ontology (BOT) compatible with the ISO 16739 abstract model (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51622">IFC</a>) but limited to building topology (walls, floors, roofs, windows, ...)</li>
+                <li>
+                    advice on use of URIs as identifiers in BIM systems
+                </li>
+                <li>
+                    advice on providing different levels of metadata for different usage scenarios 
+                </li>
+                <li>
+                    advice on the creation of RESTful APIs to return data in a variety of relevant formats
+                </li>
+              </ul>
+      </section>
+      <section id="bot-ont">
+        <h3>BOT - Building Topology Ontology</h3>
+        <p>The WG will work with the authors of existing simple building ontologies to complete the development of a new core building topology ontology through to Recommendation status. This ontology will serve as a small and easily extendable reference ontology for this WG. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>), the geospatial domain (<a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>), and the sensor domain (<a href="https://www.w3.org/TR/vocab-ssn/">SSN</a>).</p>
+      </section>
+      <section id="product-ont">
+        <h3>PRODUCT - Building Product Ontology</h3>
+        <p>The WG will work with the authors of existing building and product ontologies to complete the development of a new building product ontology through to Recommendation status. This ontology will serve as a small and easily extendable reference ontology for this WG. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>).</p>
+      </section>
+      <section id="pset-ont">
+        <h3>PSET - Building Element Property Ontology</h3>
+        <p>The WG will work with the authors of existing building and product ontologies to complete the development of an ontology that can capture the properties and characteristics of building products and materials (fire resistance, heat transmittance values, ...). This ontology will be developed up to Recommendation status. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>) and the sensor domain (<a href="https://www.w3.org/TR/vocab-ssn/">SSN</a>). Furthermore, it will aim to align with standardisation activities that occur in this direction in CEN/TC442 and in <a href="http://bsdd.buildingsmart.org/">buildingSMART Data Dictionary (bSDD)</a>.</p>
+      </section>
+      <section id="geom-ont">
+        <h3>GEOM - Geometry Ontology</h3>
+        <p>The WG will work with the authors of existing geometric modellers to capture 2D and 3D geometric representations of concepts and elements in buildings. In developing this ontology, strong collaboration is sought with the <a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>, which has already built recommendations for representing geometry in the geospatial domain. Extensions will be developed to enable also the representation of 3D geometry in a well performing data standard. This ontology will be developed up to Recommendation status. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>) and the geospatial domain (<a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>).</p>
+      </section>
+      <section id="dog-ont">
+        <h3>Alignment with building control and automation domain</h3>
+        <p>The WG will work with the authors of the existing <a href="http://lov.okfn.org/dataset/lov/vocabs/dogont">DogOnt ontology</a>, <a href="http://ontology.tno.nl/saref">SAREF ontology</a>, and <a href="https://www.w3.org/TR/vocab-ssn/">SSN ontology</a>, so that a distinct and formal alignment with these ontologies is available from the BOT, PRODUCT, and/or PSET vocabularies. These alignments are completed through to Recommendation status. Further requirements already identified in the building data community will be taken into account.</p>
+      </section>
+      <section id="qudt">
+        <h3>Alignment with building units and measurements domain</h3>
+        <p>The WG will work with the authors of the existing <a href="http://www.qudt.org/qudt/owl/1.0.0/">QUDT ontology</a> and <a href="http://www.opengeospatial.org/standards/om">O&amp;M model</a> to complete the development of this ontology through to Recommendation status. The BOT ontology will be aligned to the QUDT - Units ontology and the OGC O&amp;M - Observation and Measurements Ontology. Further requirements already identified in the building data community will be taken into account.</p>
+      </section>
+    </section>
+
+    <section id="Methodology">
+      <h2>Methodology</h2>
+      <p>In order to find out the requirements for the deliverables of the Community Group, use cases were collected. For the purpose of the Community Group, a use case is a story that describes challenges with respect to linked building data for existing or envisaged information systems. It does not need to adhere to certain standardized format. Use cases are primarily used as a source of requirements, but a use case could be revisited near the time the work of the Community Group will reach completion, to demonstrate that it is now possible to make the use case work.</p> 
+      <p>The Community Group has derived requirements from the collected use cases. A requirement is something that needs to be achieved by one or more deliverables and is phrased as a specification of functionality. Requirements can lead to one or more tests that can prove whether the requirement is met.</p>
+      <p>Care was taken to only derive requirements that are considered to in scope for the further work of the Community Group. The scope of the Community Group is determined by the <a href="https://w3c-lbd-cg.github.io/lbd/charter/">charter</a>. To help keeping the requirements in scope, the following questions were applied:</p>
+      <ol>
+      <li>Is the requirement specifically about building data?</li>
+      <li>Is the use case including data published, reused, and accessible via Web technologies?</li>
+      <li>Has a use case a description that can lead to a testable requirement?</li>
+      </ol>
+    </section>
+
+    <section id="UseCases">
+      <!--A HTML template for use cases can be found at the end of this section -->
+      <h2>Use Cases</h2>
+        <p>Use cases that describe current problems or future opportunities for Linked Building Data have been gathered as a first activity of the Community Group. They were mainly contributed by members of the Group, but there were also contributions from other interested parties. In this chapter these use cases are listed and identified. Each use case is related to one or more Community Group <a href="#Deliverables">deliverables</a> and to one or more <a href="#Requirements">requirements</a> for future deliverables.</p>
+        <section id="ExampleUC">
+          <h3>Example UC</h3>
+          <p class="contributor">Name, <a href="http://example.org/">Company</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>MINES Saint-Étienne needs to share building topology and product data on the web as linked data. This is a simple use case that claim made purely for the benefit of providing an example use case. Thanks SDW members for the wording of these paragraphs. Provide external links for more info if you can, like data or slides.</p>
+          <p>This use case covers aspects of some of the Group deliverables that are listed below this description. Please do the same thing -- i.e. name the deliverables that clearly contribute to a solution to this use case and include "Unsure" if there may be other that you have not named but it is not clear to you whether you should have (and if you are not sure about any of them, "Unsure" alone is fine for now!).</p>
+          <p>The description of the use case may be only 3 or 4 paragraphs. Tell a story about how it will work (or how it works now and what you want to do better). Try to articulate the benefit of solving the problem (ideally, you will also describe the challenges you are facing now, but that might be asking too much).</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a></p>
+          <p class="relatedRequirements"><a href="#Req1"></a></p>
+        </section>
+        
+        <section id="proposeUC">
+          <h3>Propose your own Use Case</h3>
+          
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchC3NBA6cMvMGHOejZ2aXsZtGN7W5py_5kG0HDdClaaN1Ucw/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+
+          
+        </section>
+        
+
+        <!-- Template for use cases
+        <section id="">
+          <h3></h3>
+          <p class="contributor"></p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+            <p></p>
+          </div>
+          <p class="relatedDeliverables"><a href="#BestPractices"></a>, <a href="#TimeOntologyInOWL"></a>, <a href="#SSN"></a>, <a href="#CoverageInLinkedData"></a></p>
+          <p class="relatedRequirements"></p>
+        </section>
+        -->
+      </section>
+      <br>
+      <section id="Requirements">
+      <h2>Requirements</h2>
+        <p>This chapter lists the requirements for the deliverables of the Community Group, in alphabetical order.</p>
+        <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended  way should have, or who should make the recommendation. A recommended way could be a formal recommendation or standard from an authoritative standards body like the W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
+
+        <section id="Req1">
+          <h3>Zones and sub-zones</h3>
+          <p>It should be possible to represent a zone and its sub-zones, inside and outside a building, potentially spanning multiple storeys.</p>
+          <div class="issue" data-number="XX">
+            <p>This requirement needs clarification, is there a requirement for describing storeys?</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a></p>
+          <p class="relatedUseCases"><a href="#ExampleUC"></a>, ...</p>
+        </section> 
+
+        <section id="proposeRec">
+          <h3>Propose a requirement</h3>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckO2svMpjDqHvgoICx-kcOaF4USzrDldQF09fAOsATsjql7g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+          <p class="relatedDeliverables"></p>
+          <p class="relatedUseCases"></p>
+        </section> 
+
+      <!-- Template for requirements:
+       <section id="">
+        <h3></h3>
+        <p></p>
+        <p class="relatedDeliverables"><a href=""></a>, <a href=""></a></p>
+        <p class="relatedUseCases"><a href=""></a>, <a href=""></a></p>
+      </section>
+      -->
+      
+      <!-- Template for issues:
+       <div class="issue" data-number="XX">
+          <p>This requirement needs clarification.</p>
+       </div>
+      --> 
+    </section>
+    <section id="RequirementsByDeliverable">
+      <h2>Requirements by deliverable</h2>
+      <p>For convenience, this chapter lists requirements grouped by Working Group deliverable.</p>
+      <div class="note" data-number="XX">
+          <p>This section is generated automatically</p>
+        </div>
+<!--      <div id="table1"></div> -->
+    </section>
+    <section id="ack">
+      <h2>Acknowledgments</h2>
+      <p>The editors are grateful for all contributions made to this document. In particular we thank the people that have contributed use cases (their names are mentioned with each use case) and the Community Group members that helped in mining and refining the requirements.</p>
+    </section>
+    <script class='remove'> 
+      <!-- Create a list of deliverables with related requirements. -->
+      var tab = document.getElementById("RequirementsByDeliverable");
+      var deliverables = document.getElementById("Deliverables").getElementsByTagName("section");
+      var requirements = document.getElementById("Requirements").getElementsByTagName("section");
+      var relatedDelivs = [];
+      var dId, rId, dLabel, rLabel, dp, dpb, dpbt1, dpbt2, dpba, dbpat, dpo, dpol, dpola, dpolat;
+      for (i = 0; i < deliverables.length; i++) {
+        dId = deliverables[i].id;
+        if (dId == "UseCasesAndRequirements") {continue;}
+        dLabel = deliverables[i].getElementsByTagName("h3")[0].innerText;
+//        dp = document.createElement("p");
+        dp = document.createElement("section");
+        dp.id = 'ar'+dId ;
+//        dpb = document.createElement("b");
+        dpb = document.createElement("h3");
+        dpbt1 = document.createTextNode("Requirements for deliverable ");
+        dpb.appendChild(dpbt1);
+        dpba = document.createElement("a");
+        dpbat = document.createTextNode(dLabel);
+        dpba.appendChild(dpbat);
+        dpba.href = "#" + dId;
+        dpb.appendChild(dpba);
+        //dpbt2 = document.createTextNode(":");
+        //dpb.appendChild(dpbt2);
+        dp.appendChild(dpb);
+        dpo = document.createElement("ol");
+        for (j = 0; j < requirements.length; j++) {
+          rId = requirements[j].id;
+          rLabel = requirements[j].getElementsByTagName("h3")[0].innerText;
+          relatedDelivs = requirements[j].getElementsByClassName("relatedDeliverables")[0].getElementsByTagName("a");
+          for (k = 0; k < relatedDelivs.length; k++) {
+            if (relatedDelivs[k].getAttribute("href") == "#" + dId) {
+              dpol = document.createElement("li");
+              dpola = document.createElement("a");
+              dpolat = document.createTextNode(rLabel);
+              dpola.appendChild(dpolat);
+              dpola.href = "#" + rId;
+              dpol.appendChild(dpola);
+              dpo.appendChild(dpol);           
+            }
+          }
+        }
+        dp.appendChild(dpo);
+        tab.appendChild(dp);
+      }
+    </script>
+  </body>
+</html>
