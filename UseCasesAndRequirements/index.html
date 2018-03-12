@@ -157,6 +157,77 @@
       <!--A HTML template for use cases can be found at the end of this section -->
       <h2>Use Cases</h2>
         <p>Use cases that describe current problems or future opportunities for Linked Building Data have been gathered as a first activity of the Community Group. They were mainly contributed by members of the Group, but there were also contributions from other interested parties. In this chapter these use cases are listed and identified. Each use case is related to one or more Community Group <a href="#Deliverables">deliverables</a> and to one or more <a href="#Requirements">requirements</a> for future deliverables.</p>
+        <section id="cstb1">
+          <h3>Property on partial element</h3>
+          <p class="contributor">Nicolas BUS, <a href="http://www.cstb.fr/">CSTB</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>CSTB needs to check buildings againts building regulation. The idea is to take an IFC file, execute a rule and return a BCF as result including the elements Ids that are not valid. </p>
+          <p>Sometimes, the element level is not accurate enough to express the result. The reason is that some part of the element can be valid, some other part not valid. Let's take the example of a corridor with multiple aisles. The corridor is modeled with only one Space but each aisle can have its own width. This way some aise can have a sufficient width while others can be not valid. </p>
+          <p>This idea is to be able to break an element into parts with their own geometry, to be able to identify each part and let's each part have their own properties.This use case address various deliverables.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a></p>
+        </section>
+        <section id="cstb2">
+          <h3>Reasonning on geometry</h3>
+          <p class="contributor">Nicolas BUS, <a href="http://www.cstb.fr/">CSTB</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>CSTB needs to check buildings models againts regulation. Each control point is written as a semanctic rule. Those control points can deal with objet properties, object relations and/or object geometry. </p>
+          <p>Whereas objects, properties, geometry and direct relation are explicit within the model, topological relations are most of the time implicit and need to be processed. For instance, we need to know if to spaces are adjacent and to get informations about the exchange surface (nature, surface). Thoses operations on geometry can be performed by some triplestore that integrate semantic topological functions such as those defined by the OGC (Open Geospatial Consortium) standards. </p>
+          <p>Here we have to find the right level of detail for this kind of operations. Too poors  (such as bounding box) and the results are wrong, too accurate (BREP : Boundary representation with triangles) and the amount of calcutation turns far too heavy. The challenge would be to find the right kind of geometrical representation and minimum level of details we need to infer topological relations between models elements.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#geom-ont"></a></p>
+        </section>
+        <section id="cstb3">
+          <h3>Materializing requirements</h3>
+          <p class="contributor">Nicolas BUS, <a href="http://www.cstb.fr/">CSTB</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>CSTB needs to performs model checking against French building code. We assume that all the information needed is included in the building model. Thus we can apply queries or rules in order to check a specific control point.</p>
+          <p>In some cases it necessary to materialize requierements by creating specific object, with properties and geometry. For instance, the regulation say that accessible doors should be have enough free space in front of them to permit operation for people in wheelchair. The geometrical property of the free space are described too. In such a case it could be interesting to materialize this kind of free space to be able to infer on it. </p>
+          <p>In terms of ontology, we need to be able to create and identifiy an objet that is not part of the building but only materialize a requirement. The same need could be derived for requierment properties and the way to distinguish them from the inner properties.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a></p>
+        </section>
+        <section id="ctup1">
+          <h3>Design: heat loss computation for heating-cooling systems</h3>
+          <p class="contributor">Richard Pinkas, <a href="https://www.cvut.cz/en">CTU Prague</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>Distinguishing zones/rooms (areas/types of horizontal-vertical constructions, openings, zone volumes), their constructions areas facing to exterior, their common internal constructions areas, and sending these data to relevant computation (proprietary or open) software - ideal via API , or by simple exporting via file. Nice example has softwae PHPP (Pasiv Haus Institute) with plugin doing these connections within easy managable Sketchup (<a href="http://shop.passiv.de/literaturbestellung/index.php/en/product/view/1/1494">http://shop.passiv.de/literaturbestellung/index.php/en/product/view/1/1494</a> ). How could be this done within BIM models ? (in proprietary formats or on open formats)</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#product-ont"></a></p>
+        </section>
+        <section id="ctup2">
+          <h3>Designing the HVAC systems schematics</h3>
+          <p class="contributor">Richard Pinkas, <a href="https://www.cvut.cz/en">CTU Prague</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>HVAC diagrams as easy description of concept of system intended to design is important informational document within discusions over the design phase, Building Authority acceptance phase, as well as in operation and service phase of HVAC system life cycle. It may be created in BIM softwre as first idea of system intended to design. Possibility to define it as system consisting from many parts (products or other subsystems (other products)) will give additional value to the quality of processes such : concept description, optimalisation, promotion. System design, system tendering, updating the changes or comparing the system with other diagrams from possible databbase of these schemas => possible way to error-check of HVAC system schema and avoiding design errors. Possible way to analyze actual trends in HVAC systems if adequate database will be built as time passes. Another utilization is to define BAS control requirements or define BAS control design documentation on it.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a></p>
+        </section>
+        <section id="ctup3">
+          <h3>Data property query</h3>
+          <p class="contributor">Richard Pinkas, <a href="https://www.cvut.cz/en">CTU Prague</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>It is reasonable to be able to ask about data property (data space) of specific product. Example given : You have found on web three types of heat-pumps on market. You want to use either heat pump which has performance data defined analytically - in polynoms, or heat pump which has performance data set on cube matrix. That means you will avoid selection of the heat-pumps with COP as "only one number" value.  The answer of the data property query shall exactly define the character of the data and its volume-range.  It is reasonable to count with possibility, that data may have even N-dimensional form comparing to easily understandable 3-dimensional form of data -> where can be on the first data connected other properties based on specific equations.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#product-ont"></a>, <a href="#pset-ont"></a></p>
+        </section>
+        <section id="tudarmstadt1">
+          <h3>Multi-Functional Facade Components</h3>
+          <p class="contributor">Anna Wagner, <a href="http://www.iib.tu-darmstadt.de/willkommen/index.en.jsp">TU Darmstadt</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>Within the research project "Solar Construction Processes" (SolConPro), the holistic integration of multi-functional facade components (such as energy active facades) is investigated. The developed approach includes the application of Semantic Web Technologies for describing complex product data. For further information on the research project and considered approach see <a href="http://www.solconpro.de">http://www.solconpro.de</a> .</p>
+          <p>Currently, descriptions of multi-functional facade components are exchanged in personal manner via telephone or mail. This is based on the absence of an exchange format allowing a dynamic and full description of such products. Therefore, manufacturers offer data sheets containing different information and naming of attributes for every product, impeding their application by non-experts. To facilitate planners in working with these products, a flexible and unified product description schema is necessary.</p>
+          <p>Multi-functional components present various challenges towards product descriptions. First, the products do not resemble only one product category, but can be considered as individuals of multiple categories (e.g. facade element, PV component, and window). Thereby, it must be possible to classify one component with different product categories. Second, the varying usage of innovative technologies cause products of the same category to hold diverging properties, requiring to drop template based approaches, as no singular template describing all products of such a category can be created. Third, as coherences between geometrical and non-geometrical information may occur, describing both within one schema allows an easier depiction of such relationships.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#product-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a></p>
+        </section>
         <section id="ExampleUC">
           <h3>Example UC</h3>
           <p class="contributor">Name, <a href="http://example.org/">Company</a>.</p>
@@ -199,6 +270,28 @@
         <p>This chapter lists the requirements for the deliverables of the Community Group, in alphabetical order.</p>
         <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended  way should have, or who should make the recommendation. A recommended way could be a formal recommendation or standard from an authoritative standards body like the W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
 
+
+        <section id="REQOccupancy">
+          <h3>Occupancy schedules for zones</h3>
+          <p>Occupancy schedules shall be possible to apply on each and every zone within building - in the case of need for HVAC design requirements (from investor/architect to HVAC engineer) and thus for HVAC systems design. Occupancy schedule shall have at least 24 values per each zone, where shall be possible to input numbers of persons utilized the zone in a) absolute values (persons)  b) relative values (67,3 % of 253 persons) c) by probability of person occurence in zone ( 7AM - 35% chance that the zone will be occupied, 8AM - 38% chance ... 12AM - 78 %... 13AM - 100% ... etc.)</p>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a></p>
+        </section> 
+        <section id="REQTemporary">
+          <h3>Temporary properties and spatial properties of the building products</h3>
+          <ul>
+            <li> It shall be possible to define that some elements may have temporal property over time (air flow in duct, water flow in pipe, current in the electric wires). It may be defined as state of product (state:Broken, state:on, state:onFlow, state:currentON  etc.) </li>
+            <li> It shall be also possible to define, that every element shall not be closer nearby another element in specified distance (with or without tolerance) =>ability to filtering and sorting elements within XY table/range as method of comparing each doubles. Example : grey water pipe shall not be closer to upper layer of floor than 150 mm etc.</li>
+            <li>It shall be possible to define also the spatial restrictions of elements :  e.g.  water tap shall not be above the electric plug, emergency signal fire button shall not be in height larger than average person´s height etc. </li>
+            </ul>
+            <p> By this possibility, there can be offered wider area of building analysis for example for mentioned validation with the Building code. Another reason may be the analysis of possible epidemy sources within hospitals with high mortality or ilness infestation. Query for the data filtration may be e.g.  "find each room where had been opened windows while ventilation system was off" , "find each waterpipes not smaller than DN35 with their distance smaller than 120 mm AND with both their distance from bearing vertical construction larger than 100 mm", etc. </p>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a></p>
+        </section> 
+        <section id="REQobjectdefinition">
+          <h3>Design-phase object definition</h3>
+          <p>Over design development, there are more design phases required to meet the Building code (at least in Czech Republic) : project is divided to possible four consequently joined agendas thus four specific documentations may be possibly required by Building authorities or other participants of building process (urban planning documentation, building permit documentation, realisation documentation, true state of building documentation). Many of building parts thus may not occur in each of the phase documentation or may have specific visual presentation. It shall be possible to specify the visual definition of the object. </p>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a></p>
+        </section> 
+
         <section id="Req1">
           <h3>Zones and sub-zones</h3>
           <p>It should be possible to represent a zone and its sub-zones, inside and outside a building, potentially spanning multiple storeys.</p>
@@ -208,6 +301,7 @@
           <p class="relatedDeliverables"><a href="#bot-ont"></a></p>
           <p class="relatedUseCases"><a href="#ExampleUC"></a>, ...</p>
         </section> 
+
 
         <section id="proposeRec">
           <h3>Propose a requirement</h3>
