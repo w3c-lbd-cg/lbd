@@ -228,6 +228,31 @@
           </div>
           <p class="relatedDeliverables"><a href="#product-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a></p>
         </section>
+        <section id="frauenhofer1">
+          <h3>Query Cross-Standard Product Data</h3>
+          <p class="contributor">Georg Ferdinand Schneider, <a href="https://github.com/TechnicalBuildingSystems/">Fraunhofer IBP</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>In the Architecture, Construction and Engineering (AEC) domain numerous formats exist to enable electronic exchange of data related to products stemming from the domain. For example the following non-exhaustive list has been gathered: FreeClassOWL, BauDataWeb, eClassOWL, UNSPSC, proficl@ss, omniclass, BAUKOM, PPBIM, VDI3805 and ISO757, CoClass (Sweden), ISO12006-2, NIST PDTO, NBS PDT, VVS Kataloget - National, Denmark, BNL - National, Netherlands.</p>
+          <p>From this heterogeneity a number of problems arise:<p>
+          <ul>
+            <li>Implementing an adapter to each format is impossible for tool vendors</li>
+            <li>Economically it is not affordable for building product manufacturers to publish their product data in each of the formats</li>
+            <li>The product data can be available for one kind of products in one format and in a different one for another. Querying both is difficult when published in different formats.</li>
+          </ul>
+          <p>The technologies developed in the group help in overcoming some issues. Semantic Web technologies provide the means for semantic integration heterogeneous data formats. The to be developed product and properties ontologies form the basis for integrating the various formats.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a></p>
+        </section>
+        <section id="frauenhofer1">
+          <h3>UP-Onto</h3>
+          <p class="contributor">Pouya Zangeneh, <a href="http://utoronto.ca/">University of Toronto</a>/<a href="https://www.hatch.com/">Hatch ltd</a>.</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>Large engineering projects require extensive public or private capital expenditures and other resources. They are also subjected to a variety of unique factors and therefore having different risk exposures. The current method of quantifying these risk exposures are quite subjective to fields, firms and even regions. The main way to increase objectivity is by trying to come up with objective statistical base rates for various aspects of these projects. The problem is that the data that is required to do so is often not available. Although many companies and governmental agencies report their data on their large engineering projects, there is not a broad consensus around definitions. This makes many of the research that is done on projects subjected to various biases and definitions within their data sets. Another problem is that this abundance of project data is usually in the form of reports and tables. These problems make this a unique use case area for promoting interoperability through semantic web. Uniform Project Ontology aims to unify the risk characteristics of these projects through the lens of capital investment. </p>
+          </div>
+          <p class="relatedDeliverables"><a href="#qudt"></a></p>
+        </section>
         <section id="ExampleUC">
           <h3>Example UC</h3>
           <p class="contributor">Name, <a href="http://example.org/">Company</a>.</p>
@@ -245,7 +270,7 @@
           <h3>Propose your own Use Case</h3>
           <p>The list of proposed use cases is accessible in <a href="https://docs.google.com/spreadsheets/d/1XWJ9zRVOGCLdHJ6nJeSJWdvpZxndxD4QR7F_TJ98Bjk/edit?usp=sharing">a separate document</a></p>
           
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchC3NBA6cMvMGHOejZ2aXsZtGN7W5py_5kG0HDdClaaN1Ucw/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchC3NBA6cMvMGHOejZ2aXsZtGN7W5py_5kG0HDdClaaN1Ucw/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
           
         </section>
@@ -291,6 +316,15 @@
           <p>Over design development, there are more design phases required to meet the Building code (at least in Czech Republic) : project is divided to possible four consequently joined agendas thus four specific documentations may be possibly required by Building authorities or other participants of building process (urban planning documentation, building permit documentation, realisation documentation, true state of building documentation). Many of building parts thus may not occur in each of the phase documentation or may have specific visual presentation. It shall be possible to specify the visual definition of the object. </p>
           <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a></p>
         </section> 
+        <section id="REQDataResponsibilityDefinition">
+          <h3>Design-phase object definition</h3>
+          <p>Unwanted events in CAE/FM happens periodically. It often leads to the loss of the material/finances and human lives looses.  There are many points over life-cycle of buildings, where an unwanted cause of troubles could begin. After such event it usually official investigation processes are on place, done by specialists due to a trial process.  This circumstances are leading to the need of preparing the building data for:</p>
+          <ol>
+            <li>connect concrete data validity/update to specific persons/organisations,</li>
+            <li>to prepare ability to check compliance with local legislation/technical code, which can show its breaching during design/construction/operation phases of building.</li>
+          </ol>
+          <p class="relatedDeliverables"><a href="#bot-ont"></a>, <a href="#product-ont"></a>, <a href="#pset-ont"></a>, <a href="#geom-ont"></a>, <a href="#dog-ont"></a>, <a href="#qudt"></a></p>
+        </section> 
 
         <section id="Req1">
           <h3>Zones and sub-zones</h3>
@@ -307,7 +341,7 @@
           <h3>Propose a requirement</h3>
           <p>The list of proposed requirements is accessible in <a href="https://docs.google.com/spreadsheets/d/1unubyGyJyR5mSIKH_V3xAt97PqvyMKOlzFeI-Va3zUs/edit?usp=sharing">a separate document</a></p>
 
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckO2svMpjDqHvgoICx-kcOaF4USzrDldQF09fAOsATsjql7g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckO2svMpjDqHvgoICx-kcOaF4USzrDldQF09fAOsATsjql7g/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
           <p class="relatedDeliverables"></p>
           <p class="relatedUseCases"></p>
         </section> 
