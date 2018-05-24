@@ -32,9 +32,9 @@ var respecConfig = {
       }]
       },
       ],
-    cg: "Spatial Data on the Web Working Group",
-    cgURI: "https://www.w3.org/2015/spatial/",
-    cgPublicList: "",
+    wg: "Spatial Data on the Web Working Group",
+    wgURI: "https://www.w3.org/community/lbd/",
+    wgPublicList: "",
     implementationReportURI: "https://w3c-lbd-cg.github.io/lbd/bot/",
     inlineCSS: true,
     noIDLIn: true,

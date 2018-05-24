@@ -7,35 +7,6 @@
     <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
     <script class="remove" src="config.js"></script>
     <script type="text/javascript" src="https://www.w3.org/2007/OWL/toggles.js"></script>
-    <script type="text/javascript">
-        function hide_ssn(hide, element) {
-            var scrollY = window.scrollY;
-            var scrollX = window.scrollX;
-            var posY = element.getBoundingClientRect().top;
-            if (hide) {
-                set_display_by_class('*', 'ssn', 'none');
-                set_display_by_class('span', 'ssn', 'none');
-                set_display_by_class('div', 'specterm.ssn', 'none');
-                set_display_by_class('button', 'hide-ssn', 'none');
-                set_display_by_class('button', 'show-ssn', '');
-
-                set_display_by_class('*', 'sosa', '');
-                set_display_by_class('span', 'sosa', '');
-            } else {
-                set_display_by_class('*', 'ssn', '');
-                set_display_by_class('span', 'ssn', '');
-                set_display_by_class('div', 'specterm.ssn', '');
-                set_display_by_class('button', 'hide-ssn', '');
-                set_display_by_class('button', 'show-ssn', 'none');
-
-                set_display_by_class('*', 'sosa', 'none');
-                set_display_by_class('span', 'sosa', 'none');
-            }
-            var newPosY = element.getBoundingClientRect().top;
-            var newScrollY = window.scrollY;
-            window.scrollTo(scrollX, newPosY + newScrollY - posY);
-        }
-    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
 </head>
@@ -194,9 +165,10 @@
                             <td><span property="skos:example">A building, a space, an appartment or a fire cell.</span></td>
                         </tr>
                         <tr>
-                            <th class="restrictions">Restrictions</th>
+                            <th class="restrictions">Disjoint with</th>
                             <td>
-
+                                <span about="bot:Zone" rel="owl:disjointWith" resource="bot:Element"><a href="#Element">bot:Element</a></span>, 
+                                <span about="bot:Zone" rel="owl:disjointWith" resource="bot:Interface"><a href="#Interface">bot:Interface</a></span>
                             </td>
                         </tr>
                     </tbody>
@@ -225,9 +197,44 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="restrictions">Restrictions</th>
+                            <th class="restrictions">Disjoint with</th>
                             <td>
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, 
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
+            <!-- Building -->
+            <section class="specterm" id="Building" about="bot:Building" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Building">bot:Building</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/bot#Building</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Building</em> -
+                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013].</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">A hospital or an office building.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, 
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
                             </td>
                         </tr>
                     </tbody>
@@ -256,9 +263,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="restrictions">Restrictions</th>
+                            <th class="restrictions">Disjoint with</th>
                             <td>
-
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
                             </td>
                         </tr>
                     </tbody>
@@ -287,9 +296,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="restrictions">Restrictions</th>
+                            <th class="restrictions">Disjoint with</th>
                             <td>
-
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>
                             </td>
                         </tr>
                     </tbody>
@@ -323,6 +334,9 @@
                             <th>Range Includes</th>
                             <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
                         </tr>
+                        <tr>
+                            <th  colspan="2"><span about="bot:containsZone" typeof="owl:TransitiveProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Transitive_Object_Properties">Transitive</a></span></th>
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -353,6 +367,9 @@
                         <tr>
                             <th>Range Includes</th>
                             <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th  colspan="2"><span about="bot:adjacentZone" typeof="owl:SymmetricProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Symmetric_Object_Properties">Symmetric</a></span></th>
                         </tr>
                     </tbody>
                 </table>
@@ -496,9 +513,10 @@
                                 <td><span property="skos:example">Any product or device that is described in its context of a building. For example a wall, a chair or a temperature sensor.</span></td>
                             </tr>
                             <tr>
-                                <th class="restrictions">Restrictions</th>
+                                <th class="restrictions">Disjoint with</th>
                                 <td>
-    
+                                    <span about="bot:Element" rel="owl:disjointWith" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>, 
+                                    <span about="bot:Element" rel="owl:disjointWith" resource="bot:Interface"><a href="#Interface">bot:Interface</a></span>
                                 </td>
                             </tr>
                         </tbody>
@@ -550,6 +568,15 @@
                         <tr>
                             <th>Range</th>
                             <td><span rel="rdfs:range" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                        </tr>
+                            <th>Sub property of Chain</th>
+                                <td>
+                                <span rel="owl:propertyChainAxiom" resource="[_:containsElement1]"></span>
+                                <span about="[_:containsElement1]" rel="rdf:first" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span> o
+                                <span about="[_:containsElement1]" rel="rdf:rest" resource="[_:containsElement2]"></span>
+                                <span about="[_:containsElement2]" rel="rdf:first" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>
+                                <span about="[_:containsElement2]" rel="rdf:rest" resource="rdf:nil"></span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -633,7 +660,17 @@
                             <tr>
                                 <th class="restrictions">Restrictions</th>
                                 <td>
-    
+                                    <span about="bot:Interface" rel="rdfs:subClassOf" resource="[_:Interface1]"></span>
+                                    <span about="[_:Interface1]" typeof="owl:Restriction"></span>
+                                    <span about="[_:Interface1]" rel="owl:onProperty" resource="bot:interfaceOf"><a href="#interfaceOf">bot:interfaceOf</a></span>
+                                    <span about="[_:Interface1]" property="owl:minCardinality"><em><b>MIN 2</b></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="restrictions">Disjoint with</th>
+                                <td>
+                                    <span about="bot:Interface" rel="owl:disjointWith" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>, 
+                                    <span about="bot:Interface" rel="owl:disjointWith" resource="bot:Element"><a href="#Element">bot:Element</a></span>
                                 </td>
                             </tr>
                         </tbody>
