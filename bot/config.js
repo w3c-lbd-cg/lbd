@@ -32,7 +32,7 @@ var respecConfig = {
       }]
       },
       ],
-    wg: "Spatial Data on the Web Working Group",
+    wg: "Linked Building Data Community Group",
     wgURI: "https://www.w3.org/community/lbd/",
     wgPublicList: "",
     implementationReportURI: "https://w3c-lbd-cg.github.io/lbd/bot/",

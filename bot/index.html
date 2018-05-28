@@ -6,12 +6,12 @@
     <title>Building Topology Ontology</title>
     <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
     <script class="remove" src="config.js"></script>
-    <script type="text/javascript" src="https://www.w3.org/2007/OWL/toggles.js"></script>
+    <script src="https://www.w3.org/2007/OWL/toggles.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
 </head>
 
-<body prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# skos: http://www.w3.org/2004/02/skos/core# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/>. vann: http://purl.org/vocab/vann/ voaf: http://purl.org/vocommons/voaf# time: http://www.w3.org/2006/time# sosa: http://www.w3.org/ns/sosa/ ssn: http://www.w3.org/ns/ssn/ ssn-system: http://www.w3.org/ns/ssn/systems/  sampling: http://www.w3.org/ns/sosa/sampling/ vs: http://www.w3.org/2003/06/sw-vocab-status/ns#">
+<body prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# skos: http://www.w3.org/2004/02/skos/core# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/>. vann: http://purl.org/vocab/vann/ voaf: http://purl.org/vocommons/voaf# time: http://www.w3.org/2006/time# bot: https://w3id.org/bot# sampling: http://www.w3.org/ns/sosa/sampling/ vs: http://www.w3.org/2003/06/sw-vocab-status/ns#">
 
     <section id="abstract">
         <p>
@@ -26,14 +26,14 @@
         bot</span>
         </p>
         <p style="text-align: center;">
-            The BOT ontology is available at <a href="http://www.w3id.org/bot/">http://www.w3id.org/bot/</a>
+            The Turtle version of the BOT ontology is available at <a href="http://www.w3id.org/bot/bot.ttl">http://www.w3id.org/bot/bot.ttl</a>
         </p>
     </section>
     <section id="sotd">
         <p>
             <b>General Information</b>
         </p>
-        <p>This is a Public Draft of a document prepared by the Linked Building Data Community Group (<a href="https://www.w3.org/community/lbd/">LBD</a>) — a joint W3C-OGC project (see <a href="https://www.w3.org/2015/spatial/charter">charter</a>). The document is prepared following W3C conventions. The document is released at this time to solicit public comment.</p>
+        <p>This is a Public Draft of a document prepared by the Linked Building Data Community Group (<a href="https://www.w3.org/community/lbd/">LBD</a>). The document is prepared following W3C conventions. The document is released at this time to solicit public comment.</p>
     </section>
     <section id="intro" class="informative">
         <h2>Introduction</h2>
@@ -64,7 +64,7 @@
             bot</span>
             </p>
             <p style="text-align: center;">
-                The BOT ontology is available at <a href="http://www.w3id.org/bot/">http://www.w3id.org/bot/</a>
+                The Turtle version of the BOT ontology is available at <a href="http://www.w3id.org/bot/bot.ttl">http://www.w3id.org/bot/bot.ttl</a>
             </p>
         </section>
 
@@ -485,7 +485,7 @@
 
             </section>
     
-            <section id="Zones-specification">
+            <section id="Elements-specification">
                     <h4>Specification</h4>
                   <p>This section introduces the following classes and properties:</p>
                   <div class="azlist">
@@ -569,8 +569,9 @@
                             <th>Range</th>
                             <td><span rel="rdfs:range" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
                         </tr>
+                        <tr>
                             <th>Sub property of Chain</th>
-                                <td>
+                            <td>
                                 <span rel="owl:propertyChainAxiom" resource="[_:containsElement1]"></span>
                                 <span about="[_:containsElement1]" rel="rdf:first" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span> o
                                 <span about="[_:containsElement1]" rel="rdf:rest" resource="[_:containsElement2]"></span>
@@ -663,7 +664,7 @@
                                     <span about="bot:Interface" rel="rdfs:subClassOf" resource="[_:Interface1]"></span>
                                     <span about="[_:Interface1]" typeof="owl:Restriction"></span>
                                     <span about="[_:Interface1]" rel="owl:onProperty" resource="bot:interfaceOf"><a href="#interfaceOf">bot:interfaceOf</a></span>
-                                    <span about="[_:Interface1]" property="owl:minCardinality"><em><b>MIN 2</b></em>
+                                    <span about="[_:Interface1]" property="owl:minCardinality"><em><b>MIN 2</b></em></span>
                                 </td>
                             </tr>
                             <tr>
@@ -701,6 +702,7 @@
             </section>
 
             </section>
+    </section>
     </section>
 
     <section id="VerticalSegmentation">
@@ -903,8 +905,8 @@
                 <a href="#Building"><code>bot:Building</code></a>, <a href="#Storey"><code>bot:Storey</code></a> and 
                 <a href="#Space"><code>bot:Space</code></a>.
             </li>
-            <em>List not complete</em>
         </ol>
+        <em>List not complete</em>
     </section>
 </body>
 
