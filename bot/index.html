@@ -818,7 +818,7 @@
         <h2>Common Modeling Questions</h2> This section informally discusses how to handle common modeling questions such as zone- and element adjacencies and containment or the use of interfaces.
 
         <section id="zones">
-            <h3>Zones</h3>
+            <h3>Zones - appartment example</h3>
             <p>BOT defines a Zone as <em>"An area or stretch of land having a particular characteristic, 
                 purpose, or use, or subject to particular restrictions."</em>. Any area of interest is hence 
                 a <a href="#Zone"><code>bot:Zone</code></a>. The building itself is a zone and so are all the spaces within it. 
@@ -836,6 +836,49 @@
 
                 &lt;Appartment_A&gt; a bot:Zone ;
                     bot:containsZone &lt;Bathroom_1&gt; , &lt;Bedroom_1&gt; , &lt;Kitchen_1&gt; , &lt;LivingRoom_1&gt; .
+            </pre>
+        </section>
+
+        <section id="stairwell">
+            <h3>Stairwell</h3>
+            <p>A stairwell stretches across the full height of a building and intersects with all the storeys it serves.
+                Modeling the space inside a stairwell can be tricky since it is not just assosiated to one single storey 
+                like most other spaces.
+            </p>
+            <p>
+                In most BIM authoring tools the stairwell space would just be located on the base level and hence belong
+                to this storey. In BOT, however, we have the concept of interfaces that we can use to model the relationships
+                to the different storeys. See example below:
+            </p>
+            <p>
+                Reference: [GitHub issue](https://github.com/w3c-lbd-cg/bot/issues/21)
+            </p>
+
+            <pre class="example" id="ex-appartment">
+                @prefix bot:  &lt;https://w3id.org/bot#&gt; .
+                @prefix ex:   &lt;https://example.org/bot#&gt; .
+                @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+                # tbox
+                ex:directAccess rdfs:subClassOf bot:Interface .
+
+                # abox
+                &lt;Stairwell&gt;  a bot:Space .
+                &lt;Space_A&gt;    a bot:Space .
+                &lt;Space_B&gt;    a bot:Space .
+                &lt;Bouiling_A&gt; a bot:Building .
+                &lt;Level_1&gt;    a bot:Storey .
+                &lt;Level_2&gt;    a bot:Storey .
+                &lt;Level_3&gt;    a bot:Storey .
+
+                # building / storeys relations
+                &lt;Bouiling_A&gt; bot:hasStorey &lt;Level_1&gt; , &lt;Level_2&gt; , &lt;Level_3&gt; .
+
+                # regular spaces
+                &lt;Level_2&gt; bot:hasSpace &lt;Space_A&gt; , &lt;Space_B&gt; .
+
+                # special case
+                &lt;Bouiling_A&gt; bot:hasSpace &lt;Stairwell&gt; .
             </pre>
         </section>
 
