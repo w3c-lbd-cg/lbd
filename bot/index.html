@@ -859,13 +859,13 @@
                 @prefix ex:   &lt;https://example.org/bot#&gt; .
                 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 
-                # tbox
-                ex:ZoneIntersection rdfs:subClassOf bot:Interface .
-                ex:intersectsZone rdfs:subPropertyOf bot:interfaceOf ;
-                    rdfs:domain ex:ZoneIntersection ;
-                    rdfs:range  bot:Zone .
+                # TBOX
+                ex:ZoneIntersection rdfs:subClassOf     bot:Interface .
+                ex:intersectsZone   rdfs:subPropertyOf  bot:interfaceOf ;
+                                    rdfs:domain         ex:ZoneIntersection ;
+                                    rdfs:range          bot:Zone .
 
-                # abox
+                # ABOX
                 &lt;Stairwell&gt;  a bot:Space .
                 &lt;Space_A&gt;    a bot:Space .
                 &lt;Space_B&gt;    a bot:Space .
@@ -882,12 +882,9 @@
 
                 # special case
                 &lt;Builing_A&gt; bot:hasSpace &lt;Stairwell&gt; .
-                &lt;wellLvl1&gt; a ex:ZoneIntersection ;
-                    ex:intersectsZone &lt;Level_1&gt; , &lt;Stairwell&gt; .
-                &lt;wellLvl2&gt; a ex:ZoneIntersection ;
-                    ex:intersectsZone &lt;Level_2&gt; , &lt;Stairwell&gt; .
-                &lt;wellLvl3&gt; a ex:ZoneIntersection ;
-                    ex:intersectsZone &lt;Level_3&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl1&gt; ex:intersectsZone &lt;Level_1&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl2&gt; ex:intersectsZone &lt;Level_2&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl3&gt; ex:intersectsZone &lt;Level_3&gt; , &lt;Stairwell&gt; .
             </pre>
 
             Query to get all spaces that are either located at or intersects with a specific storey:
