@@ -851,34 +851,62 @@
                 to the different storeys. See example below:
             </p>
             <p>
-                Reference: [GitHub issue](https://github.com/w3c-lbd-cg/bot/issues/21)
+                Reference: <a href="https://github.com/w3c-lbd-cg/bot/issues/21">GitHub issue</a>
             </p>
 
-            <pre class="example" id="ex-appartment">
+            <pre class="example" id="ex-stairwell">
                 @prefix bot:  &lt;https://w3id.org/bot#&gt; .
                 @prefix ex:   &lt;https://example.org/bot#&gt; .
                 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 
                 # tbox
-                ex:directAccess rdfs:subClassOf bot:Interface .
+                ex:ZoneIntersection rdfs:subClassOf bot:Interface .
+                ex:intersectsZone rdfs:subPropertyOf bot:interfaceOf ;
+                    rdfs:domain ex:ZoneIntersection ;
+                    rdfs:range  bot:Zone .
 
                 # abox
                 &lt;Stairwell&gt;  a bot:Space .
                 &lt;Space_A&gt;    a bot:Space .
                 &lt;Space_B&gt;    a bot:Space .
-                &lt;Bouiling_A&gt; a bot:Building .
+                &lt;Builing_A&gt;  a bot:Building .
                 &lt;Level_1&gt;    a bot:Storey .
                 &lt;Level_2&gt;    a bot:Storey .
                 &lt;Level_3&gt;    a bot:Storey .
 
                 # building / storeys relations
-                &lt;Bouiling_A&gt; bot:hasStorey &lt;Level_1&gt; , &lt;Level_2&gt; , &lt;Level_3&gt; .
+                &lt;Builing_A&gt; bot:hasStorey &lt;Level_1&gt; , &lt;Level_2&gt; , &lt;Level_3&gt; .
 
                 # regular spaces
                 &lt;Level_2&gt; bot:hasSpace &lt;Space_A&gt; , &lt;Space_B&gt; .
 
                 # special case
-                &lt;Bouiling_A&gt; bot:hasSpace &lt;Stairwell&gt; .
+                &lt;Builing_A&gt; bot:hasSpace &lt;Stairwell&gt; .
+                &lt;wellLvl1&gt; a ex:ZoneIntersection ;
+                    ex:intersectsZone &lt;Level_1&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl2&gt; a ex:ZoneIntersection ;
+                    ex:intersectsZone &lt;Level_2&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl3&gt; a ex:ZoneIntersection ;
+                    ex:intersectsZone &lt;Level_3&gt; , &lt;Stairwell&gt; .
+            </pre>
+
+            Query to get all spaces that are either located at or intersects with a specific storey:
+            
+            <pre class="example" id="ex-stairwell-query">
+                PREFIX bot:  &lt;https://w3id.org/bot#&gt;
+                PREFIX ex:   &lt;https://example.org/bot#&gt;
+                
+                SELECT ?space
+                WHERE {
+                    BIND(&lt;Level_2&gt; AS ?storey)
+                    {
+                    ?i ex:intersectsZone ?storey ;
+                        ex:intersectsZone ?space .
+                    } UNION {
+                        ?storey bot:hasSpace ?space .
+                    }
+                    FILTER(?space != ?storey)
+                }
             </pre>
         </section>
 
