@@ -961,6 +961,147 @@
 
         </section>
 
+        <section id="osh">
+            <h3>Flat from Open Smart Home Data Set</h3>
+
+            <p>The following example describes a flat in a multi family dwelling modeled in the Open Smart Home data set (OSH) the data set is <a href="https://github.com/TechnicalBuildingSystems/OpenSmartHomeData">available here</a>. </p>
+            <pre class="example">
+                @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+                @prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.
+                @prefix dog: &lt;http://elite.polito.it/ontologies/dogont.owl#&gt; .
+                @prefix bot: &lt;https://w3id.org/bot#&gt; .
+                @prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
+                @prefix geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt; .
+                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                @prefix osh: &lt;https://w3id.org/ibp/osh/OpenSmartHomeDataSet#&gt; .
+                @prefix : &lt;https://w3id.org/ibp/osh/OpenSmartHomeDataSet#&gt; .
+
+                [] rdf:type owl:Ontology ;
+                    dcterms:title &quot;Excerpt of the Open Smart Home Data set ontology.&quot;@en ;
+                    rdfs:seeAlso &lt;https://github.com/TechnicalBuildingSystems/OpenSmartHomeData&gt; 
+                    dcterms:license &lt;http://creativecommons.org/licenses/by-sa/4.0&gt; .
+
+                :Site1  rdf:type owl:NamedIndividual ,
+                                bot:Site ;
+                        rdfs:label &quot;Site of the building&quot;@en ;       
+                        bot:hasBuilding :Building1 .
+                        
+                :Level1 rdf:type owl:NamedIndividual ,
+                                    bot:Storey ;
+                        rdfs:label &quot;Ground floor of the building&quot;@en .
+
+                :Level2 rdf:type owl:NamedIndividual ,
+                                    bot:Storey ;
+                        rdfs:label &quot;First floor of the building&quot;@en .
+                        
+                :Building1 rdf:type owl:NamedIndividual ,
+                                        bot:Building ;
+                        rdfs:label &quot;Real building with smart home system.&quot;@en ;
+                           bot:hasStorey :Level1 ,
+                                         :Level2 ;
+                           bot:hasSpace  :Kitchen ,
+                                         :Lobby ,
+                                         :Room1 ,
+                                         :Room2 ,
+                                         :Room3 ,
+                                         :Toilet ,
+                                         :RoomBeforeToilet ,
+                                         :Staircase ,
+                                         :Bathroom ;
+                        geo:lat &quot;49.460899&quot; ;
+                        geo:long &quot;11.069208&quot; ;
+                        geo:alt &quot;300&quot; .
+
+                # Rooms without sensors
+                :Lobby rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Lobby ;
+                        rdfs:label &quot;Lobby in flat with no sensors&quot;@en .
+                :RoomBeforeToilet rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Room .
+
+                :Staircase rdf:type owl:NamedIndividual ,
+                                  bot:Space .
+                                         
+                # Kitchen
+                :Kitchen rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Kitchen ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Kitchen-temp-Sensor ,
+                                            :Kitchen-tempT-Sensor ,
+                                            :Kitchen-humid-Sensor ,
+                                            :Kitchen-brigh-Sensor ,
+                                            :Kitchen-tempS-Actuator ,
+                                            :Kitchen-heater .
+
+                # Room1
+                :Room1 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bedroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room1-temp-Sensor ,
+                                            :Room1-tempT-Sensor ,
+                                            :Room1-humid-Sensor ,
+                                            :Room1-brigh-Sensor ,
+                                            :Room1-tempS-Actuator ,
+                                            :Room1-heater .
+                # Room2
+                :Room2 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Livingroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room2-temp-Sensor ,
+                                            :Room2-tempT-Sensor ,
+                                            :Room2-humid-Sensor ,
+                                            :Room2-brigh-Sensor ,
+                                            :Room2-tempS-Actuator ,
+                                            :Room2-heater .
+
+                # Room3
+                :Room3 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Livingroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room3-temp-Sensor ,
+                                            :Room3-outTemp-OutSensor ,
+                                            :Room3-tempTli-Sensor ,
+                                            :Room3-tempTre-Sensor ,
+                                            :Room3-humid-Sensor ,
+                                            :Room3-brigh-Sensor ,
+                                            :Room3-tempS-Actuator ,
+                                            :Room3-heater .
+
+                # Bathroom
+                :Bathroom rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bathroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Bathroom-temp-Sensor ,
+                                            :Bathroom-tempT-Sensor ,
+                                            :Bathroom-humid-Sensor ,
+                                            :Bathroom-brigh-Sensor ,
+                                            :Bathroom-tempS-Actuator ,
+                                            :Bathroom-heater .
+
+                # Toilet
+                :Toilet rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bathroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Toilet-temp-Sensor ,
+                                            :Toilet-tempT-Sensor ,
+                                            :Toilet-humid-Sensor ,
+                                            :Toilet-brigh-Sensor ,
+                                            :Toilet-tempS-Actuator ,
+                                            :Toilet-heater .
+
+
+            </pre>
+        </section>
+        
     </section>
     <section class="appendix" id="acknowledgments">
         <h2>Acknowledgments</h2> The Editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
