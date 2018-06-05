@@ -45,9 +45,60 @@
         </p>
     </section>
 
-    <section id="Developments" class="informative">
-        <h2>Origins of BOT</h2>
-        <p>Here we briefly review the origins of BOT, namely the first version suggested at the <a href="http://www.lc3-2017.com/">LC3-2017</a> conference in Heraklion.
+    <section class="informative" id="Overview">
+        <h4>Overview</h4>
+        <p>The following figure provides an overview of the core classes
+            and properties that are specifically related to modeling Zones.
+        </p>
+
+        <figure>
+            <a href="assets/zones.png"><img alt="Zones" src="assets/zones.png"></a>
+            <figcaption>Classes and relationships involved in Zones</figcaption>
+        </figure>
+        <p>
+            Zones must be understood as a Matryoshka doll principle. The <a href="#Site"><code>bot:Site</code></a>
+            instance, &lt;siteX&gt;, contains one building, &lt;buildingA&gt;, specified by the <a href="#hasBuilding">
+            <code>bot:hasBuilding</code></a> relationship. &lt;buildingA&gt; contains one storey, &lt;storey01&gt;,
+            specified by the <a href="#hasStorey"><code>bot:hasStorey</code></a> relationship. &lt;storey01&gt;
+            contains two spaces, &lt;spaceA12&gt; and &lt;spaceA13&gt;, specified by the <a href="#hasSpace">
+            <code>bot:hasSpace</code></a> relationship. The two spaces are adjacent, which is specified by the
+            <a href="#Site"><code>bot:adjacentZone</code></a> relationship. The transitive <a href="#containsZone">
+            <code>bot:containsZone</code></a> relationship is a super-property of both <a href="#hasBuilding">
+            <code>bot:hasBuilding</code></a>, <a href="#hasStorey"><code>bot:hasStorey</code></a> and 
+            <a href="#hasSpace"><code>bot:hasSpace</code></a> - therefore &lt;siteX&gt; contains all the other 
+            <a href="#Zone"><code>bot:Zone</code></a> instances.
+        </p>
+
+        <p>The following figure provides an overview of the core classes
+            and properties that are specifically related to modeling Interfaces.
+        </p>
+        <figure>
+            <a href="assets/interfaces.png"><img alt="Interfaces" src="assets/interfaces.png"></a>
+            <figcaption>Classes and relationships involved in Interfaces</figcaption>
+        </figure>
+        <p>
+            Interfaces are used in situations where it is necessary to quantify a relationship between
+            two elements or zones or an element and a zone. In the figure, there are two 
+            <a href="#Zone"><code>bot:Zone</code></a> instances that are both adjacent to the same
+            <a href="#Element"><code>bot:Element</code></a> instance &lt;wall22&gt;. To quantify
+            the heat transfer areas between &lt;spaceA12&gt;/&lt;wall22&gt; and &lt;zoneB&gt;/&lt;wall22&gt;
+            respectively, two interfaces, &lt;interfaceA&gt; and &lt;interfaceB&gt;, are introduced.
+            Both interfaces are related to &lt;wall22&gt; through the <a href="#interfaceOf"><code>bot:interfaceOf</code></a>
+            relationships, but their second <a href="#interfaceOf"><code>bot:interfaceOf</code></a> relationship is to
+            either &lt;spaceA12&gt; or &lt;zoneB&gt;.
+        </p>
+
+
+    </section>
+
+
+    <section id="Requirements" class="informative">
+        <h2>Requirements</h2>
+        <p>Here we list the set of competency questions the BOT ontology answers.
+        <ul>
+            <li>A building site belongs to a construction site</li>
+            <li>Sites, buildings, storeys, rooms, are all zones</li>
+        </ul>
     </section>
     <section id="Axiomatization" class="normative">
         <h2>Axiomatization</h2>
@@ -73,63 +124,34 @@
             <div id="index-of-classes-and-properties">
                 <div class="azlist">
                     <p>Classes:
-                        <a href="#Zone">bot:Zone</a> , 
-                        <a href="#Site">bot:Site</a> , 
                         <a href="#Building">bot:Site</a> , 
-                        <a href="#Storey">bot:Storey</a> , 
-                        <a href="#Space">bot:Space</a> , 
                         <a href="#Element">bot:Element</a> , 
                         <a href="#Interface">bot:Interface</a>
+                        <a href="#Site">bot:Site</a> , 
+                        <a href="#Space">bot:Space</a> , 
+                        <a href="#Storey">bot:Storey</a> , 
+                        <a href="#Zone">bot:Zone</a> , 
                     </p>
 
                 </div>
                 <div class="azlist">
                     <p>Object Properties:
-                        <a href="#containsZone">bot:containsZone</a> , 
+                        <a href="#adjacentElement">bot:adjacentElement</a> , 
                         <a href="#adjacentZone">bot:adjacentZone</a> , 
                         <a href="#containsElement">bot:containsElement</a> , 
-                        <a href="#adjacentElement">bot:adjacentElement</a> , 
-                        <a href="#hasBuilding">bot:hasBuilding</a> , 
-                        <a href="#hasStorey">bot:hasStorey</a> , 
-                        <a href="#hasSpace">bot:hasSpace</a> , 
+                        <a href="#containsZone">bot:containsZone</a> , 
                         <a href="#hostsElement">bot:hostsElement</a> , 
                         <a href="#interfaceOf">bot:interfaceOf</a>
-                    </p>
-                </div>
-                <div class="azlist">
-                    <p>Datatype Properties:
-                        <em>None</em>
+                        <a href="#hasBuilding">bot:hasBuilding</a> , 
+                        <a href="#hasSpace">bot:hasSpace</a> , 
+                        <a href="#hasStorey">bot:hasStorey</a> , 
                     </p>
                 </div>
             </div>
         </section>
 
     <section id="Zones">
-        <h3>Zones</h3>
-        <section class="informative" id="Zones-overview">
-            <h4>Overview and examples</h4>
-            <p>The following figure provides an overview of the core classes
-                and properties that are specifically related to modeling Zones.
-            </p>
-
-            <figure>
-                <a href="assets/zones.png"><img alt="Zones" src="assets/zones.png"></a>
-                <figcaption>Classes and relationships involved in Zones</figcaption>
-            </figure>
-            <p>
-                Zones must be understood as a Matryoshka doll principle. The <a href="#Site"><code>bot:Site</code></a>
-                instance, &lt;siteX&gt;, contains one building, &lt;buildingA&gt;, specified by the <a href="#hasBuilding">
-                <code>bot:hasBuilding</code></a> relationship. &lt;buildingA&gt; contains one storey, &lt;storey01&gt;,
-                specified by the <a href="#hasStorey"><code>bot:hasStorey</code></a> relationship. &lt;storey01&gt;
-                contains two spaces, &lt;spaceA12&gt; and &lt;spaceA13&gt;, specified by the <a href="#hasSpace">
-                <code>bot:hasSpace</code></a> relationship. The two spaces are adjacent, which is specified by the
-                <a href="#Site"><code>bot:adjacentZone</code></a> relationship. The transitive <a href="#containsZone">
-                <code>bot:containsZone</code></a> relationship is a super-property of both <a href="#hasBuilding">
-                <code>bot:hasBuilding</code></a>, <a href="#hasStorey"><code>bot:hasStorey</code></a> and 
-                <a href="#hasSpace"><code>bot:hasSpace</code></a> - therefore &lt;siteX&gt; contains all the other 
-                <a href="#Zone"><code>bot:Zone</code></a> instances.
-            </p>
-        </section>
+        <h3>Zones and sub-zones</h3>
 
         <section id="Zones-specification">
                 <h4>Specification</h4>
@@ -610,28 +632,6 @@
 
     <section id="Interfaces">
             <h3>Interfaces</h3>
-            <section class="informative" id="Interfaces-overview">
-                <h4>Overview and examples</h4>
-                <p>The following figure provides an overview of the core classes
-                    and properties that are specifically related to modeling Interfaces.
-                </p>
-    
-                <figure>
-                    <a href="assets/interfaces.png"><img alt="Interfaces" src="assets/interfaces.png"></a>
-                    <figcaption>Classes and relationships involved in Interfaces</figcaption>
-                </figure>
-                <p>
-                    Interfaces are used in situations where it is necessary to quantify a relationship between
-                    two elements or zones or an element and a zone. In the figure, there are two 
-                    <a href="#Zone"><code>bot:Zone</code></a> instances that are both adjacent to the same
-                    <a href="#Element"><code>bot:Element</code></a> instance &lt;wall22&gt;. To quantify
-                    the heat transfer areas between &lt;spaceA12&gt;/&lt;wall22&gt; and &lt;zoneB&gt;/&lt;wall22&gt;
-                    respectively, two interfaces, &lt;interfaceA&gt; and &lt;interfaceB&gt;, are introduced.
-                    Both interfaces are related to &lt;wall22&gt; through the <a href="#interfaceOf"><code>bot:interfaceOf</code></a>
-                    relationships, but their second <a href="#interfaceOf"><code>bot:interfaceOf</code></a> relationship is to
-                    either &lt;spaceA12&gt; or &lt;zoneB&gt;.
-                </p>
-            </section>
     
             <section id="Interfaces-specification">
                     <h4>Specification</h4>
@@ -707,7 +707,21 @@
 
     <section id="VerticalSegmentation">
         <h2>Vertical Segmentation</h2>
-        <p>This section introduces the specifications for the vertical segmentation modules that align BOT to a variety of related ontologies and specifications. </p>
+        <p>As BOT is proposed as a central ontology in the domain of AEC/FM industry, alignments with existing domains are provided as separate modules.</p>
+
+<!-- So far an alignment for the following ontologies has been provided:
+
+SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#)
+
+ThinkHome [Ontology](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
+
+DogOnt [Ontology](http://elite.polito.it/ontologies/dogont.owl#)
+
+DERI Rooms [Ontology](http://vocab.deri.ie/rooms.html)
+
+ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
+
+<p>This section introduces the specifications for the vertical segmentation modules that align BOT to a variety of related ontologies and specifications. </p> -->
         
         <!-- BRICK alignment -->
         <section id="BRICK_Alignment" class="informative">
@@ -842,8 +856,8 @@
     </section>
 
     <section class="appendix" id="wide-review">
-        <h3>Wide review</h3>
-        <p>Results of the wide review of BOT is missing.</p>
+        <h3>Implementation Report</h3>
+        <p>The following ontologies and softwares produce or consume terms from the BOT ontology.</p>
 
     </section>
 
@@ -854,42 +868,66 @@
 
             <p>A SPARQL-visualizer example is <a href="https://w3c-lbd-cg.github.io/bot/?tab=0">available here</a>. </p>
             <pre class="example">
-                @prefix bot: &lt;https://w3id.org/bot#&gt; .
+@prefix bot: &lt;https://w3id.org/bot#&gt; .
 
-                # A simple two storey building with two spaces at each floor.
+# A simple two storey building with two spaces at each floor.
 
-                &lt;SiteA&gt; a bot:Site ;
-                    bot:hasBuilding &lt;BuildingA&gt; .
-                
-                # Since the range of bot:hasBuilding is bot:Building it is 
-                # automatically inferred that &lt;BuildingA&gt; is a bot:Building.
+&lt;SiteA&gt; a bot:Site ;
+    bot:hasBuilding &lt;BuildingA&gt; .
 
-                &lt;BuildingA&gt; bot:hasStorey &lt;Storey00&gt; , &lt;Storey01&gt; .
-                
-                # Since the range of bot:hasStorey is bot:Storey it is automatically 
-                # inferred that &lt;Storey00&gt; and &lt;Storey01&gt; are instances of bot:Storey.
-                
-                &lt;Storey00&gt; bot:hasSpace &lt;SpaceA&gt; , &lt;SpaceB&gt; .
-                
-                &lt;Storey01&gt; bot:hasSpace &lt;SpaceC&gt; , &lt;SpaceD&gt; .
+# Since the range of bot:hasBuilding is bot:Building it is 
+# automatically inferred that &lt;BuildingA&gt; is a bot:Building.
 
-                # Since the range of bot:hasSpace is bot:Space it is automatically inferred
-                # that &lt;SpaceA&gt;, &lt;SpaceB&gt;, &lt;SpaceC&gt; and &lt;SpaceD&gt; are instances of bot:Space.
+&lt;BuildingA&gt; bot:hasStorey &lt;Storey00&gt; , &lt;Storey01&gt; .
 
-                # Since bot:Site, bot:Building, bot:Storey and bot:Building are all sub classes of
-                # bot:Zone, &lt;SiteA&gt;, &lt;BuildingA&gt;, &lt;Storey00&gt; , &lt;Storey01&gt;, &lt;SpaceA&gt;, &lt;SpaceB&gt;,
-                # &lt;SpaceC&gt; and &lt;SpaceD&gt; are all instances of bot:Zone
+# Since the range of bot:hasStorey is bot:Storey it is automatically 
+# inferred that &lt;Storey00&gt; and &lt;Storey01&gt; are instances of bot:Storey.
 
-                # Since bot:hasBuilding, bot:hasStorey and bot:hasSpace are all sub properties of 
-                # bot:containsZone the following can also be deduced:
-                # 
-                # &lt;SiteA&gt; bot:containsZone &lt;BuildingA&gt; .
-                # &lt;BuildingA&gt; bot:containsZone &lt;Storey00&gt; , &lt;Storey01&gt; .
+&lt;Storey00&gt; bot:hasSpace &lt;SpaceA&gt; , &lt;SpaceB&gt; .
 
+&lt;Storey01&gt; bot:hasSpace &lt;SpaceC&gt; , &lt;SpaceD&gt; .
+
+# Since the range of bot:hasSpace is bot:Space it is automatically inferred
+# that &lt;SpaceA&gt;, &lt;SpaceB&gt;, &lt;SpaceC&gt; and &lt;SpaceD&gt; are instances of bot:Space.
+
+# Since bot:Site, bot:Building, bot:Storey and bot:Building are all sub classes of
+# bot:Zone, &lt;SiteA&gt;, &lt;BuildingA&gt;, &lt;Storey00&gt; , &lt;Storey01&gt;, &lt;SpaceA&gt;, &lt;SpaceB&gt;,
+# &lt;SpaceC&gt; and &lt;SpaceD&gt; are all instances of bot:Zone
+
+# Since bot:hasBuilding, bot:hasStorey and bot:hasSpace are all sub properties of 
+# bot:containsZone the following can also be deduced:
+# 
+# &lt;SiteA&gt; bot:containsZone &lt;BuildingA&gt; .
+# &lt;BuildingA&gt; bot:containsZone &lt;Storey00&gt; , &lt;Storey01&gt; .
             </pre>
-
         </section>
+        <section id="extending-bot">
+            <h3>Extending BOT</h3>
 
+            <p>BOT may be extended either by specifying subclasses, or subproperties, of BOT elements. </p>
+            <p>The following snippet extends <code>bot:Element</code> with <code>h:SpaceHeater</code>.</p>
+            <pre class="example">
+@prefix bot:  &lt;https://w3id.org/bot#> .
+@prefix h:  &lt;https://example.org/heatingSystem#> .
+@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  &lt;http://www.w3.org/2002/07/owl#> .
+
+h:SpaceHeater a owl:Class ;
+    rdfs:subClassOf bot:Element .
+            </pre>
+            <p>The following snippet defines <code>h:heatedBy</code> as a subproperty of <code>bot:containsElement</code>.</p>
+            <pre class="example">
+@prefix bot:  &lt;https://w3id.org/bot#> .
+@prefix h:  &lt;https://example.org/heatingSystem#> .
+@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  &lt;http://www.w3.org/2002/07/owl#> .
+
+h:SpaceHeater a owl:Class .
+h:heatedBy a owl:ObjectProperty ;
+             rdfs:subPropertyOf bot:containsElement ;
+             rdfs:range h:SpaceHeater .
+            </pre>
+        </section>
     </section>
     <section class="appendix" id="acknowledgments">
         <h2>Acknowledgments</h2> The Editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
