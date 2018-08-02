@@ -1,7 +1,7 @@
 var respecConfig = {
   specStatus: "CG-DRAFT",
   shortName: "lbd-ucr",
-  edDraftURI: "http://w3c.github.io/w3c-lbd-cg/UseCasesAndRequirements",
+  edDraftURI: "https://w3c-lbd-cg.github.io/lbd/UseCasesAndRequirements/",
   editors: [
   {
     name: "Maxime Lefrançois",
