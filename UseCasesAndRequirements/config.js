@@ -9,9 +9,9 @@ var respecConfig = {
     companyURL: "http://www.mines-stetienne.fr/"
   },
   {
-    name: "Editor 2",
-    company: "Company 2",
-    companyURL: "company URL 2"
+    name: "Kris McGlinn",
+    company: "Trinity College Dublin",
+    companyURL: "http://www.tcd.ie/"
   }],
   wg: "Linked Building Data Community Group",
   wgURI: "https://www.w3.org/community/lbd/",
