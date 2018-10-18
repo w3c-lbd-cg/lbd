@@ -6,7 +6,7 @@ var respecConfig = {
   {
     name: "Maxime Lefrançois",
     company: "École Nationale Supérieure des Mines de Saint-Étienne",
-    companyURL: "http://www.mines-stetienne.fr/"
+    companyURL: "https://www.mines-stetienne.fr/"
   },
   {
     name: "Kris McGlinn",
