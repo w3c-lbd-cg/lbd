@@ -1,0 +1,54 @@
+irc.w3.org
+
+https://www.w3.org/2002/03/RRSAgent
+https://www.w3.org/2001/12/zakim-irc-bot.html
+https://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm?content-type=text/html#Quick_Start_Guide
+
+
+/invite Zakim lbd
+/invite rrsagent lbd
+rrsagent, bookmark
+
+Meeting: <name>
+Chair: <name>
+Agenda: <URI>
+Scribe: <name>
+ScribeNick: <nick>
+
+
+
+agenda+ <text>
+agenda?
+agenda <number> = <newtext>
+
+
+pick a scribe
+
+
+present+ <name>
+regrets+ <name>
+
+next agendum
+
+
+= Queuing 
+
+q+ <name>[, <name> ...]]
+q+ [<name>] to <note>
+q- [<name>]
+q?
+
+ack <name>
+
+close the queue
+open the queue
+
+rrsagent, draft minutes
+rrsagent, where am i?
+
+ACTION: Frank, Mary and Kate to propose solution for issue 42
+ACTION: David to clean the kitchen [PENDING]
+RESOLUTION: Issue 42 closed as duplicate of issue 21
+
+zakim, bye
+rrsagent, bye
