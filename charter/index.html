@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <title>Building Data on the Web Working Group Charter</title>
+    <title>Linked Building Data Working Group Charter</title>
     <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
     <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
-    <style type="text/css">
+    <style>
       ul#navbar {
         font-size: small;
       }
@@ -40,418 +40,429 @@
         font-size: small;
       }
 
+      div.summary {
+        margin-top: 0.5em;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 0.5em;
+        background: rgb(240,240,255);
+        border: solid 1px black;
+      }
+
     </style>
   </head>
   <body>
 
     <div id="template">
       <ul style="font-size: small" id="navbar">
+        <li><a href="#introduction">Introduction</a></li>
         <li><a href="#scope">Scope</a></li>
+        <li><a href="#out-of-scope">Out of Scope</a></li>
         <li><a href="#deliverables">Deliverables</a></li>
-        <li><a href="#coordination">Dependencies and Liaisons</a></li>
-        <li><a href="#participation">Participation</a></li>
+        <li><a href="#success-criteria">Success Criteria</a></li>
+        <li><a href="#timeline-milestone">Timeline and milestones</a></li>
+        <li><a href="#coordination">Coordination</a></li>
         <li><a href="#communication">Communication</a></li>
         <li><a href="#decisions">Decision Policy</a></li>
         <li><a href="#patentpolicy">Patent Policy</a></li>
+        <li><a href="#licensing">Licencing</a></li>
         <li><a href="#about">About this Charter</a></li>
       </ul>
+    </div>
 
 <p><a href="http://www.w3.org/"><img width="72" height="48" src="./index_files/w3c_home" alt="W3C"></a></p>
 
-<h1 id="title">Building Data on the Web Working Group Charter</h1>
+<h1 id="title">Linked Building Data Working Group Charter</h1>  
 
-<p>Vast amounts of heterogeneous data are generated and used during the <b>life cycle of a building</b>. An example type of data are product data, which describe the building and the elements that make up the building. These include walls, windows, pipes, ducts, light switches, sensors and other devices. Starting from these data, and through their connection to more fine-grained data, such as sensor measurements data, usage data, intelligent domotic system data, geographical data, weather data, highly advanced services can be supplied over the web to various end users.</p>
-<p>The <strong>mission</strong> of the Building Data on the Web Working Group group is to clarify and formalize the relevant standards landscape for building data on the web.
-In particular:</p>
 
-<ol>
-<li>to determine how building information can best be integrated with other data on the Web;</li>
-<li>to determine how machines and people can discover that different facts in different datasets relate to the same building, especially when 'building' is expressed in different ways and at different levels of granularity;</li>
-<li>to identify and assess existing methods and tools and then create a set of best practices for their use;</li>
-<li>where desirable, to complete the standardization of informal technologies already in widespread use.</li>
-</ol>
+<p>The <a href="https://www.w3.org/community/lbd/">Linked Building Data on the Web Community Group (LBD-CG)</a> successfully brought together experts in the area of Building Information Modeling (BIM) and Web of Data technologies. This Working Group Charter covers the outcome of this group that are believed to be mature enough to progress to W3C Recommendations.</p>
 
-      <table class="summary-table">
-        <tbody>
+<table class="summary-table">
+  <tbody>
+    <tr>
+      <th>Start date</th>
+      <td>DD MM YYYY</td>
+    </tr>
+    <tr id="Duration">
+      <th>End date</th>
+      <td>Start date + 2 years</td>
+    </tr>
+    <tr>
+      <th>Chairs</th>
+      <td>
+        <span class="todo">yet to be finalised</span> Current chairs of the LBD-CG:<br>
+        <ul>
+          <li>Pieter Pauwels, <a href="http://www.architectuur.ugent.be/medewerkers/pieter-pauwels/">Ghent University</a></li>
+          <li>Kris McGlinn, <a href="http://kdeg.scss.tcd.ie/users/mcglink">Trinity College Dublin</a></li>
+        </ul></td>
+    </tr>
+      <th>Team Contacts<br>(FTE %: 20)</th>
+      <td><span class="todo">yet to be finalised</span></td>          
+    </tr>
+    <tr>
+      <th>Meeting Schedule</th>
+      <td><strong>Teleconferences:</strong> weekly<br>
+        <strong>Face-to-face:</strong> twice annually, one of which coincides with W3C's TPAC</td>
+    </tr>
+  </tbody>
+</table>
+
+<section id="introduction">
+  <h2>Introduction</h2>
+
+  <p>Vast amounts of heterogeneous data are generated and used during the <b>life cycle of a building</b>. 
+  An example is product data, which describe the building and the elements that make up the building. 
+  Product data includes walls, windows, pipes, ducts, light switches, sensors and other devices. 
+  With these data as a basis, and through their connection to more fine-grained data, such as sensor measurements data, 
+  usage data, intelligent domotic system data, geographical data, weather data, 
+  highly advanced services can be supplied over the Web to various end users.</p>
+
+  <!--<p class="todo">(enhance this section based on feedback from industrials supporters)</p>
+-->
+  <p> From an industrial point of view, using Linked Data technologies and adopting common Knowledge Graph
+  models are essential to exploiting building data on the web for a range of important use cases, 
+  including those related to indoor navigation (e.g. shop navigation, evacuation and disaster, etc.), 
+  energy efficiency simulation (e.g. retrofitting, behavioural change, etc.), 
+  web-based facility management, and many more. 
+  </p>
+  <p></p>
+  The outcomes generated by this group will support building owners and companies to publish quality building data on 
+  the web in a structured way, making the development of new and novel applications possible.</p>
+
+  <p>The <a href="https://www.w3.org/DesignIssues/LinkedData.html">5 stars Linked Data paradigm</a> can be adapted for Building-related data as follows:</p>
+
+  <ul>
+    <li>Using URIs as names for building-related things such as: rooms, walls, products, elements, 
+    enable different parties to provide complementary descriptions of the same uniquely identified 
+    entities in different knowledge graphs.</li>
+    <li>Using HTTP URIs for these things enables the authority responsible for these URIs to provide 
+    reference information about this entity when one looks it up on the Web. For example, products 
+    in a catalogue, building appliances, or even the building itself.</li>
+    <li>Providing information using common standards (RDF, SPARQL) and common Knowledge Graph models 
+    enable semantic interoperability between data sources.</li> 
+    <li>Include links to other URIs can help to discover more things, such as a link to the catalogue 
+    an appliance has been chosen from, or a link to the 
+    <a href="https://www.w3.org/TR/wot-architecture/#sec-servient-architecture">Web of Things Servient
+    </a> that enables it to interact with this appliance.</li> 
+  </ul>  
+
+  </section>
+
+  <section class="scope" id="scope">
+    <h2>Scope</h2>
+    <p>The scope of the Linked Building Data Working Group, LBD-WG, is Linked Data models and technologies as they may be applied to Building-related information.</p>
+  </section>
+
+  <section id="out-of-scope">
+    <h2>Out of Scope</h2>
+    <p>The following features are out of scope, and will not be addressed by this Working Group:</p>
+    <ul>
+      <li>description of the geometry</li>
+      <li>description of the geospatial data</li>
+      <li>infrastructures (bridges, roads, tunnels, rail, ...)</li>
+    </ul>
+  </section>
+  <section id="deliverables">
+    <h2>Deliverables</h2>
+    <p>The Working group will output five main deliverables to enable interoperability of applications across the life cycle of buildings</p> 
+
+    <dl>
+      <dt><strong>Use case and requirement document</strong> (Note):</dt>
+      <dd>A document setting out the range of problems that the working groups are trying to solve.</dd>
+      <dt><strong>Building Data on the Web Best practices</strong> (Note):</dt>
+      <dd>Determine how building-related information such as product catalogues or building appliances can best be integrated with other data on the Web, determine how machines and people can discover them, identify and assess existing methods and tools and then create a set of best practices for their use.</dd>
+      <dt><strong>Building Topology ontology</strong>  (Recommendation):</dt>
+      <dd>Lightweight semantic description of buildings that can be used for a wide range of applications across their life cycle.</dd>
+      <dt><strong>Product and Property Evaluation ontology</strong> (Recommendation):</dt><dd>Lightweight and domain independent semantic description of features of interest (including products), their properties, and value association to these properties.</dd>
+      <dt><strong>Building-specific taxonomy of products, and properties</strong> (Recommendation):</dt><dd>Taxonomy of common  building-related products and properties, defined as specializations of the lightweight domain independent ontologies and exposed following the devised best practices.</dd>
+    </dl>
+
+    <p>Other non-normative documents may be created such as:</p>
+
+    <ul>
+      <li>A project information ontology</li>
+      <li>Primer documents for non-Web experts</li>
+    </ul>
+
+
+    <section>
+      <h3>Use Cases and Requirements (Note)</h3>
+      <p>A document setting out the range of problems that the working groups are trying to solve, and requirements that the different semantic models should fulfil.</p>
+    </section>
+
+    <section>
+      <h3>Building Data on the Web Best Practices (Note)</h3>
+      <p>
+        Building-related data currently often sit in fragmented silos, making it difficult to develop applications to access and integrate them. Furthermore, where data is available, they may be represented in structures or formats which further inhibit ease of re-use, as they are not necessarily web-oriented.
+      </p>
+      <p>
+        The Linked Building Data Working Group will determine how building-related information such as product catalogues or building appliances can best be made better available on the Web and integrated with other data such that machines and people can discover them.
+      </p>
+      <p>The Building Data on the Web Best Practices document will summarize the set of identified best practices. This will include advices to adopt the <a href="https://5stardata.info/en/">5 stars deployment scheme for Data on the Web</a>. 
+      </p>
+    </section>
+
+    <section>
+      <h3>Building Topology ontology (BOT) (Recommendation)</h3>
+      <p>Designing, planning, constructing and maintaining a building are tasks that involve multiple stakeholders each having their own interpretations and requirements for the common dataset. Furthermore, each stakeholder consumes, processes and manipulates information about the building during it's full life cycle.</p>
+      <p>Several industries have interfaces to the construction industry and buildings in particular without this being their main industry. As there is often a need to describe some sensor, product, device in the context of the building in which it sits and as the building is itself also a feature of interest in the context of a smart city, there is a demand for a minimal, extendable ontology that describes anything in its context of a building.</p>
+      <p>The Linked Building Data Working Group will publish the Building Topology Ontology (BOT) as a minimal ontology for defining relationships between the sub-components of a building.</p>
+      <p>This document will also discuss how it can be used together with other standards (IFC, GeoSPARQL, Semantic Sensor Network, PROV-O ...), and separate initiatives (schema.org, Haystack, BRICK, ...)</p>
+    </section>
+
+
+    <section>
+      <h3>Product and Property Evaluation ontology (Recommendation)</h3>
+      <p>Core concepts such as Features of Interest (FoI), their Properties, and the evaluation of these Properties, are being regularly redefined by standards and initiatives inside and outside the W3C and the building domain. Examples include <a href="https://www.w3.org/TR/vocab-ssn/"><abbr title="Semantic Sensor Network Ontology">SOSA/SSN</abbr></a>, the <a href="https://www.w3.org/TR/wot-thing-description/">WoT Thing Description</a>, the <a href="https://www.w3.org/auto/wg/">Automotive Working Group</a>, 
+      <a href="https://www.etsi.org/technologies-clusters/technologies/smart-appliances">ETSI SAREF</a>, <a href="http://schema.org/">schema.org</a>, <a href="http://bsdd.buildingsmart.org/">BSDD</a>.</p>
+      <p>The Linked Building Data Working Group will publish the Product and Property Evaluation Ontology as a minimal ontology for defining features of interest, their properties, and assign values to the properties of features of interest. Three levels of description are envisioned:</p>
+      <ul>
+        <li>L1: the FoI is directly linked to the value for one of its properties <pre>&lt;room> ex:temperature "21.3 DEG"^^cdt:ucum</pre></li>
+        <li>L2: there is an indirection between the FoI and the value for its property
+        <pre>&lt;room> ex:hasProperty &lt;room#temperature> .
+&lt;room#temperature> a ex:TemperatureProperty ;
+  ex:value "21.3 DEG"^^cdt:ucum .</pre> </li>
+        <li>L3: there is an additional indirection between the property and the value for this property
+        <pre>&lt;room> ex:hasProperty &lt;room#temperature> .
+&lt;room#temperature> a ex:TemperatureProperty ;
+  ex:evaluation &lt;room#current-temperature> . 
+&lt;room#current-temperature> a ex:PropertyEvaluation ;
+  ex:value "21.3 DEG"^^cdt:ucum .</pre> </li>
+      </ul>
+
+      <p>Also, the Product and Property Evaluation Ontology will describe upper-level classes for Products, which can commonly be modeled as individual products, generic products, or manufacturer products, but could also be modeled as product categories or product placeholders. <a href="http://schema.org">schema.org</a> only considers the first three categories of products.</p>
+      <p>This document will also discuss how it can be used together with other standards (IFC, GeoSPARQL, Semantic Sensor Network, ...), and separate initiatives (schema.org, Haystack, BRICK, ...)</p>
+    </section>
+    <section>
+      <h3>Building-specific taxonomy of products, and properties (Note)</h3>
+      <p>The Linked Building Data Working Group will publish a taxonomy of common building-related products and properties, defined as specializations of the lightweight domain independent ontologies and exposed following the devised best practices.</p>
+      <p>This document will also discuss how it can be used together with other standards (IFC, GeoSPARQL, Semantic Sensor Network, ...), and separate initiatives (schema.org, Haystack, BRICK, ...)</p>
+    </section>
+  </section>
+  <section id="success-criteria">
+    <h2>Success Criteria</h2>
+    <section>
+      <h3>Best Practice Success Criteria</h3>
+        <p>To advance to Proposed Recommendation, evidence will be adduced that each of the best practices have been followed or recommended in at least two environments.</p>
+    </section>
+    <section>
+      <h3>Ontology Success Criteria</h3>
+        <p>To advance to Proposed Recommendation, evidence will be adduced that each term in the vocabulary has been used in multiple environments. This will be most strictly applied to terms developed by the WG, less strictly to terms originating from the prior work whose use or otherwise may not be knowable.</p>
+    </section>
+  </section>
+  <section id="timeline-milestone">
+    <h2>Timeline and Milestones</h2>
+    <section>
+      <h3>Milestones</h3>
+      <table style="width:80%" class="roadmap">
+        <caption> Milestones </caption>
           <tr>
-            <th>Start date</th>
-            <td>1 September 2018</td>
-          </tr>
-          <tr id="Duration">
-            <th>End date</th>
-            <td>31 August 2019</td>
-          </tr>
-          <tr>
-            <th>Chairs</th>
-            <td>
-              Pieter Pauwels, <a href="http://www.architectuur.ugent.be/medewerkers/pieter-pauwels/">Ghent University</a><br>
-			  Kris McGlinn, <a href="http://kdeg.scss.tcd.ie/users/mcglink">Trinity College Dublin</a><br></td>
+            <th>Deliverable</th>
+            <th><abbr title="First Public Working Draft">FPWD</abbr></th>
+            <th><abbr title="Last Call Working Draft">LC</abbr></th>
+            <th><abbr title="Candidate Recommendation">CR</abbr></th>
+            <th><abbr title="Proposed Recommendation">PR</abbr></th>
+            <th><abbr title="Recommendation">Rec</abbr></th>
           </tr>
           <tr>
-            <th>Team Contacts<br>(FTE %: 20)</th>
-            <td><i class="todo">@@</i></td>          
+            <th>Use Cases and Requirements</th>
+            <td class="WD1">To be finalised
+            MM YYYY</td>
+            <td class="LC"></td>
+            <td class="CR"></td>
+            <td class="PR"></td>
+            <td class="REC"></td>
           </tr>
           <tr>
-            <th>Meeting Schedule</th>
-            <td><strong>Teleconferences:</strong> weekly<br>
-              <strong>Face-to-face:</strong> twice annually, one of which coincides with W3C's TPAC</td>
+            <th>Building Data on the Web Best Practices</th>
+            <td class="WD1"></td>
+            <td class="LC"></td>
+            <td class="CR"></td>
+            <td class="PR"></td>
+            <td class="REC"></td>
           </tr>
-        </tbody>
+
+          <tr>
+            <th>Building Topology ontology</th>
+            <td class="WD1"></td>
+            <td class="LC"></td>
+            <td class="CR"></td>
+            <td class="PR"></td>
+            <td class="REC"></td>
+          </tr>
+
+          <tr>
+            <th>Product and Property Evaluation ontology</th>
+            <td class="WD1"></td>
+            <td class="LC"></td>
+            <td class="CR"></td>
+            <td class="PR"></td>
+            <td class="REC"></td>
+          </tr>
+
+          <tr>
+            <th>Building-specific taxonomy of products, and properties</th>
+            <td class="WD1"></td>
+            <td class="LC"></td>
+            <td class="CR"></td>
+            <td class="PR"></td>
+            <td class="REC"></td>
+          </tr>
+          <tr>
+            <td colspan="6">Note: The timeline will be proposed closer to the creation date of the Working Group.</td>
+          </tr>
       </table>
-      <section class="scope" id="scope">
-        <h2 id="scope">Scope</h2>
-<p>
-  Several data models (some of which are standards) currently exist which capture aspects of the building and support making the data available to applications. Examples are the Industry Foundation Classes (IFC), SAREF, DogOnt, QUDT, etc. However, these data currently often sit in fragmented silos, making it difficult to develop applications to access and integrate them. Furthermore, where data is available, they may be represented in structures or formats which further inhibit ease of re-use, as they are not necessarily web-oriented.
-</p>
-<p>
-  The Building Data on the Web Working Group aims to make building data better available on the web. It aims to achieve this through the development of a simplified reference building ontology which is based on existing schemas for building data. The Building Data on the Web Working Group will develop a small core set of concepts and properties which are essential for describing buildings and which can be published as reference building data on the web. This core set of concepts will focus on the <b>building topology</b> (spaces, storeys, site) and on </b>building product data</b> (walls, beams, devices). For these domains, OWL ontologies are developed, and publication strategies are proposed and recommended. Relevant other data is discussed, including geometric data, sensor data, geographic data and other data. Where possible, this Working Group will connect to existing W3C Interest Groups and Working Groups and support standards that are developed in these groups (e.g. <abbr title="Semantic Sensor Network Ontology">SSN</abbr> for sensor data).
-</p>
-<p>
-    This approach is essential to exploiting building data on the web for a range of important use cases, including those related to indoor navigation (e.g. shop navigation, evacuation and disaster, etc.), energy efficiency simulation (e.g. retrofitting, behavioural change, etc.), web-based facility management, and many more. This data will allow building owners and companies to publish quality building data on the web in a structured way, making the development of new and novel applications possible.
-</p>
-
-        <p>The main objective of the Building Data on the Web Working Group is to enable all stakeholders in the 
-            building life cycle to access and query required data to support their business use cases using web technologies. Its scope is then Web technologies as they may be applied to buildings (products, geometry, usage, topology). Infrastructure data (bridges, roads, railroads) 
-        </p>
-        <p>
-            Where relevant, it will promote Linked Data using the 
-            <a href="http://www.w3.org/DesignIssues/LinkedData.html">5 Stars of Linked Data</a> paradigm, but 
-            this will not exclude other technologies.
-        </p>
-
-        <div id="section-out-of-scope">
-          <h2 id="out-of-scope">Out of Scope</h2>
-          <p>The following features are out of scope, and will not be addressed by this Working Group:</p>
-          <ul>
-            <li>Geometry data</li>
-            <li>Geospatial data</li>
-            <li>Infrastructure data (bridges, roads, railroads)</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Success Criteria</h3>
-          <p>In order to advance to <a title="Proposed Recommendation" href="https://www.w3.org/2017/Process-20170301/#RecsPR">Proposed Recommendation</a>, each specification is expected to have <a href="https://www.w3.org/2017/Process-20170301/#implementation-experience">at least two independent implementations</a> of each of best practice or term defined in the specification.</p>
-        </div>
-      </section>
-
-      <section id="deliverables">
-        <h2>Deliverables</h2>
-
-        <p>More detailed milestones and updated publication schedules are available on the <i class="todo"><a href="#">group publication status page</a></i>.</p>
-
-        <p>The titles of the deliverables are not final; the Working Group will
-          have to decide on the final titles as well as the structures of the
-          documents. The Working Group may also decide to merge some
-          deliverables into one document or produce several documents that
-          together constitute one of the deliverables.</p>
-
-        <div id="normative">
-          <h3>
-            Normative Specifications
-          </h3>
-          <p>
-            The Working Group will deliver the following W3C normative specifications:
-          </p>
-          <dl>
-            <dt class="spec" id="bdw-bp">Building Data on the Web Best Practices</dt>
-            <dd>
-              <p>This will include:</p>
-              <ul>
-                <li>documentation of an agreed core building topology ontology (BOT) compatible with the ISO 16739 abstract model (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=51622">IFC</a>) but limited to building topology (walls, floors, roofs, windows, ...)</li>
-                <li>
-                    advice on use of URIs as identifiers in BIM systems
-                </li>
-                <li>
-                    advice on providing different levels of metadata for different usage scenarios 
-                </li>
-                <li>
-                    advice on the creation of RESTful APIs to return data in a variety of relevant formats
-                </li>
-              </ul>
-              <p class="milestone"><b>Expected completion:</b> April 2020</p>
-            </dd>
-            <dt class="spec" id="bot-ont">BOT - Building Topology Ontology</dt>
-            <dd>
-              <p>The WG will work with the authors of existing simple building ontologies to complete the development of a new core building topology ontology through to Recommendation status. This ontology will serve as a small and easily extendable reference ontology for this WG. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>), the geospatial domain (<a href="https://www.w3.org/2015/spatial/charter">W3C Spatial Data on the Web Working Group</a>), and the sensor domain (<a href="https://www.w3.org/TR/vocab-ssn/">SSN</a>).</p>
-              <p class="milestone"><b>Expected completion:</b> August 2020</p>
-            </dd>
-
-            <dt class="spec" id="product-ont">PRODUCT - Building Product Ontology</dt>
-            <dd>
-              <p>The WG will work with the authors of existing building and product ontologies to complete the development of a new building product ontology through to Recommendation status. This ontology will serve as an easily extendable reference ontology for this WG. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>) as well as existing product ontologies (e.g. GoodRelations).</p>
-              <p class="milestone"><b>Expected completion:</b> August 2020</p>
-            </dd>
-
-            <dt class="spec" id="pset-ont">PROPS - Building Element Property Ontology</dt>
-            <dd>
-              <p>The WG will work with the authors of existing building and product ontologies to complete the development of an ontology that can capture the properties and characteristics of building products and materials (fire resistance, heat transmittance, ...). This ontology will be developed up to Recommendation status. This ontology will immediately be aligned with the existing ontologies in the construction industry (<a href="http://ifcowl.openbimstandards.org/IFC4_ADD1/">ifcOWL</a>) and the sensor domain (<a href="https://www.w3.org/TR/vocab-ssn/">SSN</a>). Furthermore, it will aim to align with standardisation activities that occur in this direction in CEN/TC442.</p>
-              <p class="milestone"><b>Expected completion:</b> August 2020</p>
-            </dd>
-
-            <dt class="spec" id="dog-ont">Alignment with building control and automation domain</dt>
-            <dd>
-              <p>The WG will work with the authors of the existing <a href="http://lov.okfn.org/dataset/lov/vocabs/dogont">DogOnt ontology</a>, <a href="http://ontology.tno.nl/saref">SAREF ontology</a>, and <a href="https://www.w3.org/TR/vocab-ssn/">SSN ontology</a>, so that a distinct and formal alignment with these ontologies is available from the BOT, PRODUCT, and/or PROPS vocabularies. These alignments are completed through to Recommendation status. Further requirements already identified in the building data community will be taken into account.</p>
-              <p class="milestone"><b>Expected completion:</b> August 2020</p>
-            </dd>
-                                   
-            <dt class="spec" id="qudt">Alignment with building units and measurements domain</dt>
-            <dd>
-              <p>The WG will work with the authors of the existing <a href="http://www.qudt.org/qudt/owl/1.0.0/">QUDT ontology</a>, <a href="http://prefix.cc/cdt">CDT</a> and <a href="http://www.opengeospatial.org/standards/om">O&amp;M model</a> to complete the development of this ontology through to Recommendation status. The BOT, PRODUCT, and PROPS ontologies will be aligned to the QUDT - Units ontology and the OGC O&amp;M - Observation and Measurements Ontology. Further requirements already identified in the building data community will be taken into account.</p>
-              <p class="milestone"><b>Expected completion:</b> August 2020</p>
-            </dd>
-          </dl>
-
-          <p>Where deliverables build on prior work, any variance developed by the Building Data on the Web WG 
-          will be backwards compatible with the existing work. The aim is to formalize existing work, not to replace 
-          or compete with it.</p>
-              
-          <p>Subject to its capacity, the working group <em>may</em> choose to develop additional relevant 
-          vocabularies and specifications in response to community demand. Such additional work <em>may</em> be carried out by one or other WG
-          independently of the other.</p>
-        </div>
-
-        <div id="ig-other-deliverables">
-          <h3>
-            Other Deliverables
-          </h3>
-          <p>
-            Other non-normative documents may be created such as:
-          </p>
-          <ul>
-            <li>Use case and requirement documents;</li>
-            <li>Test suite and implementation report for the specification;</li>
-            <li>Primer or other Best Practice documents to support web developers when designing applications.</li>
-          </ul>
-        </div>
-
-        <div id="timeline">
-          <h3>Timeline</h3>
-          <table width="80%" class="roadmap">
-            <caption> Milestones </caption>
-            <tfoot>
-              <tr>
-                <td colspan="7">Note: The group will document
-                  significant changes from this initial schedule on the group home
-                  page.</td>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <th>Deliverable</th>
-                <th><acronym title="First Public Working Draft">FPWD</acronym></th>
-                <th><acronym title="Last Call Working Draft">LC</acronym></th>
-                <th><acronym title="Candidate Recommendation">CR</acronym></th>
-                <th><acronym title="Proposed Recommendation">PR</acronym></th>
-                <th><acronym title="Recommendation">Rec</acronym></th>
-              </tr>
-              <tr>
-                <th>Use Cases and Requirements</th>
-                <td class="WD1">July 2018</td>
-                <td class="NOTE" colspan="4">October 2018</td>
-              </tr>
-              <tr>
-                <th>Best Practices</th>
-                <td class="WD1">August 2018</td>
-                <td class="LC">May 2019</td>
-                <td class="CR">August 2019</td>
-                <td class="PR">November 2019</td>
-                <td class="REC">April 2020</td>
-              </tr>
-
-              <tr>
-                <th>BOT ontology</th>
-                <td class="WD1">October 2018</td>
-                <td class="LC">February 2019</td>
-                <td class="CR">May 2019</td>
-                <td class="PR">August 2019</td>
-                <td class="REC">March 2020</td>
-              </tr>
-
-              <tr>
-                <th>PRODUCT ontology</th>
-                <td class="WD1">October 2018</td>
-                <td class="LC">February 2019</td>
-                <td class="CR">May 2019</td>
-                <td class="PR">August 2019</td>
-                <td class="REC">March 2020</td>
-              </tr>
-
-              <tr>
-                <th>PROPS ontology</th>
-                <td class="WD1">October 2018</td>
-                <td class="LC">February 2019</td>
-                <td class="CR">May 2019</td>
-                <td class="PR">August 2019</td>
-                <td class="REC">March 2020</td>
-              </tr>
-
-              <tr>
-                <th>Automation Domain Alignment</th>
-                <td class="WD1">December 2018</td>
-                <td class="LC">June 2019</td>
-                <td class="CR">September 2019</td>
-                <td class="PR">February 2020</td>
-                <td class="REC">September 2020</td>
-              </tr>
-
-              <tr>
-                <th>Measures Alignment</th>
-                <td class="WD1">December 2018</td>
-                <td class="LC">June 2019</td>
-                <td class="CR">September 2019</td>
-                <td class="PR">February 2020</td>
-                <td class="REC">September 2020</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <ul>
-            <li>1st September: Start Date</li>
-            <li>1st task: document best practices regarding the publication of building data and links between these data in the web (FPWD: 1 August 2018)<abbr title="First Public Working Draft">FPWD</abbr></li>
-            <li>2nd task: define and publish BOT ontology (FPWD: 1 October 2018)</li>
-            <li>3rd task: list and define relevant other ontologies (initial outline given above - FPWD: 1 November 2018)</li>
-            <!--<li>4th task: supply full working examples that illustrate best practices (FPWD: 1 January 2018)</li>-->
-          </ul>
-        </div>
-      </div>
     </section>
-    <section id="coordination">
-      <h2>Coordination</h2>
-      <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a title="Technical Architecture Group" href="https://www.w3.org/2001/tag/">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a title="First Public Working Draft" href="https://www.w3.org/2017/Process-20170301/#RecsWD">FPWD</a> and at least 3 months before <a title="Candidate Recommendation" href="https://www.w3.org/2017/Process-20170301/#RecsCR">CR</a>, and should be issued when major changes occur in a specification.</p>
-      <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2017/Process-20170301/#WGCharter">W3C Process Document</a>:</p>
+    <section>
+      <h3>Timeline View Summary</h3>
+      <p class="todo">Will be published later</p>
+    </section>
+  </section>
 
-      <!--<div>
-        <h3 id="ogc">Relationship with BuildingSMART International</h3>
-        <p>The Building Data on the Web Working Group will communicate with <a href="http://www.buildingsmart.org/">buildingSMART</a> International, which is the standardization body behind IFC, and in particular with the <a href="http://buildingsmart.org.gridhosted.co.uk/?p=4911">Linked Data Working Group (LDWG)</a> in buidingSMART International. The outcomes of the LDWG and this Building Data on the Web WG will nevertheless be different, as only the latter specifically aims at web-oriented data standards, which requires a different set-up than is currently in place in buildingSMART International. Strong alignment is nevertheless sought in the content. Formally, each standards body has established its own group with its own charter and operates under the respective organization's rules of membership. The two groups will work together very closely and create a set of outputs that are complementary in purpose and nature (oriented either towards a web development market or towards the construction industry market), and that are expected to be adopted as standards by W3C and buildingSMART separately.</p>
-      </div>-->
+  <section id="coordination">
+    <h2>Coordination</h2>
 
-      <div>
-        <h3 id="w3c-coordination">W3C Groups</h3>
-        <p>As well as collaborating with the Linked Data Working Group (LDWG) in BuildingSMART International, 
-        the Building Data on the Web Working Group will be responsible for liaising with the following W3C groups.</p>
-        <dl>
-          <dt><a href="http://www.w3.org/2015/spatial">Spatial Data on the Web Working Group</a></dt>
-          <dd>Ensure that the WG operates complementary to the activities of the Spatial Data on the Web Working Group.</dd>
-          <dt><a href="https://www.w3.org/WoT/">Web of Things Interest Group</a></dt>
-          <dd>Ensure that the WG takes into account best practices proposed by this Interest Group to enable a connection with the Internet of Things (IoT).</dd>
-        </dl>
-      </div>
+    <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a title="Technical Architecture Group" href="https://www.w3.org/2001/tag/">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a title="First Public Working Draft" href="https://www.w3.org/2017/Process-20170301/#RecsWD">FPWD</a> and at least 3 months before <a title="Candidate Recommendation" href="https://www.w3.org/2017/Process-20170301/#RecsCR">CR</a>, and should be issued when major changes occur in a specification.</p>
+    <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2017/Process-20170301/#WGCharter">W3C Process Document</a>:</p>
 
-      <div>
-        <h3 id="projects">Other Groups &amp; Projects</h3>
-        <dl>
-          <dt><a href="http://inspire.ec.europa.eu/"><abbr title="Infrastructure for Spatial Information in the European Community">INSPIRE</abbr></a></dt>
-          <dd>The community and standards around the European INSPIRE Directive are an important reference point for the Working Group.</dd>
-        </dl>
-      </div>
+    <section>
+      <h3>Relationship with BuildingSMART International</h3>
+      <p>The Linked Building Data Working Group will communicate with <a href="http://www.buildingsmart.org/">buildingSMART</a> International, which is the standardization body behind IFC, and in particular with the <a href="http://buildingsmart.org.gridhosted.co.uk/?p=4911">Linked Data Working Group (LDWG)</a> in buidingSMART International. </p>
+        <!--The outcomes of the LDWG and this Linked Building Data WG will nevertheless be different, as only the latter specifically aims at web-oriented data standards, which requires a different set-up than is currently in place in buildingSMART International. Strong alignment is nevertheless sought in the content. Formally, each standards body has established its own group with its own charter and operates under the respective organization's rules of membership. The two groups will work together very closely and create a set of outputs that are complementary in purpose and nature (oriented either towards a web development market or towards the construction industry market), and that are expected to be adopted as standards by W3C and buildingSMART separately.-->
     </section>
 
-    <section class="participation">
-      <h2 id="participation">
-        Participation
+    <section>
+      <h3 id="w3c-coordination">W3C Groups</h3>
+      <p>The Linked Building Data Working Group will be responsible for liaising with the following W3C groups.</p>
+      <ul>
+        <li><a href="https://www.w3.org/2017/sdwig/">OGC and W3C Spatial Data on the Web Interest Group</a></li>
+        <li><a href="https://www.w3.org/WoT/">Web of Things Interest Group</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Relation to other existing standardisation groups</h3>
+
+      <ul>
+        <li>ISO/DIS 21597 Information Container for Data Drop</li>
+        <li>ISO/DIS 23262 GIS and BIM interoperability</li>
+        <li>buildingSmart Data Dictionary (bSDD)</li>
+        <li>CEN TC 442 Building Information Modelling – WG4 Support Data Dictionaries</li>
+        <li>ETSI – Smart Appliances Reference ontology (SAREF)</li>
+        <li>American Society of Heating, Refrigerating and Air-Conditioning Engineers
+BRICK - http://brickschema.org </li>
+        <li>AFNOR Dictionary of properties</li>
+        <li>French national plan for buildings’ digital transition</li>
+      </ul>
+
+
+    </section>
+
+  </section>
+
+  <section class="participation">
+    <h2 id="participation">
+      Participation
+    </h2>
+    <p>
+      To be successful, this Working Group is expected to have 10 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+    </p>
+    <p>
+      The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href="#communication">Communication</a>.
+    </p>
+    <p>
+      The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+    </p>
+  </section>
+
+  <section id="communication">
+      <h2>
+        Communication
+      </h2>
+      <p id="public">
+        Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/2017/Process-20170301/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository, and may permit direct public contribution requests.
+      The meetings themselves are not open to public participation, however.
+      </p>
+      <p>
+        Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <i class="todo"><a href="">Working Group home page</a></i>.
+      </p>
+      <p>
+        This group primarily conducts its technical work on the public mailing list <a class="todo" id="public-name" href="mailto:public-XXXX@w3.org">public-<i class="todo">[email-list]</i>@w3.org</a> (<a class="todo" href="http://lists.w3.org/Archives/Public/public-XXXX/">archive</a>)
+        <i class="todo">or</i> on <a class="todo" id="public-github" href="XXXXX">GitHub issues</a>.
+        The public is invited to review, discuss and contribute to this work.
+      </p>
+      <p>
+        The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+      </p>
+    </section>
+
+    <section id="decisions">
+      <h2>
+        Decision Policy
       </h2>
       <p>
-        To be successful, this Working Group is expected to have 10 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+        This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/2017/Process-20170301/#Consensus"> W3C Process Document (section 3.3</a>). Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+      <p>
+         However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote, and record a decision along with any objections.
       </p>
       <p>
-        The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href="#communication">Communication</a>.
+        To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+        A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
+
+        If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
       </p>
       <p>
-        The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+        All decisions made by the group should be considered resolved unless and until new information becomes available, or unless reopened at the discretion of the Chairs or the Director.
+      </p>
+      <p>
+        This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/policies#Votes">W3C Process Document (Section 3.4, Votes)</a>, and includes no voting procedures beyond what the Process Document requires.
       </p>
     </section>
 
-    <section id="communication">
-        <h2>
-          Communication
-        </h2>
-        <p id="public">
-          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/2017/Process-20170301/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository, and may permit direct public contribution requests.
-        The meetings themselves are not open to public participation, however.
-        </p>
-        <p>
-          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <i class="todo"><a href="">Working Group home page</a></i>.
-        </p>
-        <p>
-          This group primarily conducts its technical work on the public mailing list <a class="todo" id="public-name" href="mailto:public-[email-list]@w3.org">public-<i class="todo">[email-list]</i>@w3.org</a> (<a class="todo" href="http://lists.w3.org/Archives/Public/public-[email-list]/">archive</a>)
-          <i class="todo">or</i> on <a class="todo" id="public-github" href="[link to Github repo]">GitHub issues</a>.
-          The public is invited to review, discuss and contribute to this work.
-        </p>
-        <p>
-          The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
-        </p>
-      </section>
+    <section id="patentpolicy">
+      <h2>
+        Patent Policy
+      </h2>
+      <p>
+        This Working Group operates under the <a href="http://w3.org/Consortium/Patent-Policy-20040205/">W3C Patent Policy</a> (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis.
 
-      <section id="decisions">
-        <h2>
-          Decision Policy
-        </h2>
-        <p>
-          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/2017/Process-20170301/#Consensus"> W3C Process Document (section 3.3</a>). Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
-        <p>
-           However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote, and record a decision along with any objections.
-        </p>
-        <p>
-          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
-
-          A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
-
-          If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
-        </p>
-        <p>
-          All decisions made by the group should be considered resolved unless and until new information becomes available, or unless reopened at the discretion of the Chairs or the Director.
-        </p>
-        <p>
-          This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/policies#Votes">W3C Process Document (Section 3.4, Votes)</a>, and includes no voting procedures beyond what the Process Document requires.
-        </p>
-      </section>
-
-      <section id="patentpolicy">
-        <h2>
-          Patent Policy
-        </h2>
-        <p>
-          This Working Group operates under the <a href="http://w3.org/Consortium/Patent-Policy-20040205/">W3C Patent Policy</a> (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis.
-
-          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.
-        </p>
-      </section>
-
-      <section id="licensing">
-        <h2>Licensing</h2>
-        <p>This Working Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
-      </section>
-
-      <section id="about">
-        <h2>
-          About this Charter
-        </h2>
-        <p>
-          This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
-        </p>
-      </section>
-
-    <hr>
-    <footer>
-      <address>
-        <i class="todo"><a href="mailto:">[team contact name]</a></i>
-      </address>
-
-      <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©2017
-        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
-        (
-        <a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
-        <a href="https://www.keio.ac.jp/">Keio</a>,
-        <a href="http://ev.buaa.edu.cn/">Beihang</a>
-        ), All Rights Reserved.
-
-        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+        For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.
       </p>
-    </footer>
+    </section>
 
-  
+    <section id="licensing">
+      <h2>Licensing</h2>
+      <p>This Working Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+    </section>
 
-</body></html>
+    <section id="about">
+      <h2>
+        About this Charter
+      </h2>
+      <p>
+        This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+      </p>
+    </section>
+
+  <hr>
+  <footer>
+    <address>
+      <i class="todo"><a href="mailto:">[team contact name]</a></i>
+    </address>
+
+    <p class="copyright">
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©2017
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+      (
+      <a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+      <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>
+      ), All Rights Reserved.
+
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+    </p>
+  </footer>
+</body>
+</html>
