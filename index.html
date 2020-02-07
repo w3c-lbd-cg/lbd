@@ -1,249 +1,240 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<style>
-*{margin:0;padding:0;}
-body {
-	font: 12px arial, helvetica,arial,freesans,clean,sans-serif;
-	color:black;
-	line-height:1.4em;
-	background-color: #F8F8F8;
-	padding: 0em 2em;
-}
-
-table {
-	font-size:inherit;
-	font:100%;
-	margin:1em;
-}
-
-p {
-	margin-bottom: 1em;
-}
-
-td {  
-  padding-left: 0.3em;
-}
-
-th {  
-  font-weight: bold;  
-  text-align: center;  
-  background-color: NavyBlue !important; 
-  font-size: 110%;
-  background: hsl(180, 30%, 50%); 
-  color: #fff;
-}
-
-th a:link {
-  color: #fff;
-}
-
-th a:visited {
-  color: #aaa;
-}
-
-tr:nth-child(even) { background-color: hsl(180, 30%, 93%) }
-
-table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
-table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
-
-
-select,option{padding:0 .25em;}
-optgroup{margin-top:.5em;}
-
-pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
-pre {
-	margin:1em 0;
-	background-color:#eee;
-	border:1px solid #ddd;
-	padding:5px;
-	line-height:1.5em;
-	color:#444;
-	overflow:auto;
-	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;border-radius:3px;
-}
-pre code {
-	padding:0;
-	font-size:10px;
-	background-color:#eee;
-	border:none;
-}
-code {
-	background-color:#f8f8ff;
-	color:#444;
-	padding:0 .2em;
-	border:1px solid #dedede;
-}
-
-img{border:0;max-width:100%;}
-abbr{border-bottom:none;}
-
-a{color:#4183c4;}
-
-a:link, a:active {
-  background: transparent;
-  text-decoration:none;
-}
-
-a:visited {
-  color: #529;
-  background: transparent;
-}
-
-a:hover{background-color: yellow; color: #00e;}
-
-a code,a:link code,a:visited code{color:#4183c4;}
-
-a:link img, a:visited img {
-   border-style: none
-}
-
-h1, h2, h3, h4, h5, h6
-{
-	margin-bottom: 0.5em;
-	margin-top: 1em;
-	padding-bottom: 0.15em;
-	border-bottom: 1px solid #ccc;
-	background: transparent;
-	color: #005a9c;
-	font-weight: normal;
-}
-
-h1
-{
-	border-bottom: none;
-	background: transparent;
-	/* color: #000; */
-}
-
-h4, h5, h6 {border: none;}
-
-
-hr{border:1px solid #ddd;}
-
-ul{margin:1em 0 1em 2em;}
-ol{margin:1em 0 1em 2em;}
-ul li,ol li{
-	margin-bottom:.1em;
-}
-ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
-
-ul.toc {
-  list-style: disc;
-  list-style: none;
-}
-
-blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
-dt{font-weight:bold;margin-left:1em;}
-dd{margin-left:2em;margin-bottom:1em;}
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}
-* {
-	-webkit-print-color-adjust: exact;
-}
-
-@media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
-}
-</style>
-<title>The Linked Building Data Community Group</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Linked Data, Building Information Modeling, Ontology, Semantic Web">
+    <meta name="description" content="The Linked Building Data Community Group: Managing Data through the Building Life Cycle">
+    <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./css/custom.css" rel="stylesheet" type="text/css">
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css"><!--[if IE 7]>
+    <link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
+    <![endif]-->
+      <!--[if lt IE 9]>
+      <script src="/css/html5shiv.js"></script>
+    <![endif]-->
+    <title>The Linked Building Data Community Group</title>
 </head>
-<body>
-
-<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" width="72" height="48" alt="W3C"/></a>
-</p>
-
-<h1>Linked Building Data (LBD)</h1>
-
-<p><strong>Do you work in a business that is part of the building / construction life cycle?</strong><br />
-<strong>Do you use the Building Information Modeling (BIM) process to produce BIM deliverables?</strong><br />
-<strong>Do you think that the data creation and management process are lacking, overly complex, or both?</strong><br />
-<strong>Would you like to receive data that you can easily consume, use, and handoff to the next phase?</strong></p>
-
-<p>If yes to any or all of the questions, it would be great to hear from you.</p>
-
-<p>We are the <strong>Building Data on the Web group</strong> - a combination of academic and industry partners who are working together to specifically address the challenge of managing the huge amount of data that is generated across the building life cycle.</p>
-
-<p>BIM is, of course, not new and has played a key role in the building lifecycle for over 20 years. <b>Our mission</b>, through the use of the semantic web, is to establish a new Linked Open Data based BIM cloud. <b>Our goal </b>is to enable free and semantically interoperable resources from multiple sources - geometric models, material models, product models, simulation models, weather models, geographic models, energy tariffs, etc. - to be interlinked. We want to optimise the process of integrating existing business solutions and enable the development of new and novel solutions to meet growing demands for energy efficiency well into the 21st century.</p>
-
-<p>If this sounds of interest to you, please join our group today via <a href="https://www.w3.org/community/lbd/participants">https://www.w3.org/community/lbd/participants</a>!</p>
-
-<p>See <a href="presentations/out/TPAC2018.pptx">our presentation of LBD</a> at <a href="https://www.w3.org/2018/10/TPAC/">TPAC 2018</a>.</p>
-
-<h1>Group scope</h1>
-This community group works according to a specific scope, which is communicated through the charter (see below). A number of things is hereby not included. Most predominantly, geometry is not in direct scope, even though this is highly relevant to this community. Discussions and documents around that topic are maintained in <a href="https://www.w3.org/community/lbd/geometry.html">geometry.html</a>. Other documents that have been part of this group in the past, but are not in direct current scope, are maintained in our archival page: <a href="https://www.w3.org/community/lbd/archive.html">archive.html</a>.
-
-<h2>Community Group Documents</h2>
-<p>Documents of the W3C <a href="https://www.w3.org/community/lbd/">Linked Building Data Community Group</a> (working drafts).</p>
-
-<ul>
-  <li>Proposed working group charter
-   <ul>
-    <li><span class="status"><abbr title="Editor's Draft">ED</abbr></span> <a href="charter/">Editors' Draft</a></li>
-   </ul>
-  </li>
-  <li>Use case and requirements
-   <ul>
-    <li><span class="status"><abbr title="Editor's Draft">ED</abbr></span> <a href="UseCasesAndRequirements/">Editors' Draft</a></li>
-   </ul>
-  </li>
-</ul>
-
-<h2>Domain Ontology Groups Working Docs</h2>
-<ul>
-<li>Building Topology
-<ul>
-	<li><span class="status"><abbr title="Editor's Draft">BOT Ontology Community Group Report (Draft)</abbr></span> <a href="https://w3c-lbd-cg.github.io/lbd/bot/">Release 02 June 2018</a></li>
-	<li><span class="status"><abbr title="Editor's Draft">BOT Example</abbr></span> <a href="https://github.com/w3c-lbd-cg/bot/blob/master/examples/bot_test.ttl">BOT Test Example 2017-04-05 - Walter Terkaj</a></li>
-	<li><a href="https://github.com/w3c-lbd-cg/bot">GIT Repo</a></li>
-</ul>
-</li>
-
-<li>Product
-<ul>
-	<li><b><a href="https://docs.google.com/document/d/1ArLPgMC4js6i0tGFcYyWHIvlYGNq2Tou-Ed_tPHVo7A/edit">Working Group document</a></b></li>
-	<li><a href="https://github.com/w3c-lbd-cg/product">GIT Repo</a></li>
-	<li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/product/20170823_Presentation_ES_LBD.pdf">20170823 BOT, products, and goodrelations (Emilio San Filippo)</a></li>
-</ul>
-</li>
-
-<li>Properties
-<ul>
-	<li><b><a href="https://docs.google.com/document/d/1gl_eQSl60GuOmIwu4BgUqte_4nWgjCvx05W0-7yK9qw/edit">Working Group document</a></b></li>
-	<li><a href="https://github.com/w3c-lbd-cg/props">GIT Repo</a></li>
-	<li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/props/presentation_LBDcall_20180312_final.pdf">20180312 Towards a PROPS ontology (Mathias Bonduel)</a></li>
-</ul>
-</li>
-
-<li>Project Management
-<ul>
-	<li><b><a href="https://docs.google.com/document/d/1hlsQxLXZI-0rupm4qKSOWuigy71l8fo0AvLg2bOcA1U/edit">Working Group document</a></b></li>
-	<li><a href="https://github.com/w3c-lbd-cg/project">GIT Repo</a></li>
-	<li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/project/20180326_PZangeneh_ProjectOntology.pdf">20180328 Project ontology (Pouya Zangeneh)</a></li>
-</ul>
-</li>
-</ul>
-
-<h2>Ontology Alignment Group</h2>
-<li><b><a href="https://docs.google.com/document/d/1wSxpE5O6jntcIuhey7Uv0o0ZAU1Dz-ZSICuuxbwGvCA/edit#">Working Group document</a></b></li>
+<body id="top">
+  <div class="contents">
 
 
-<h1>Participants</h1>
-In order to join, you have to register at <a href="https://www.w3.org/community/lbd/participants/">https://www.w3.org/community/lbd/participants/</a>.
+    <!-- logos -->
+      <div class="logos">
+        <a href="http://www.w3.org/" class="w3-logo"><img alt="w3c logo" src="https://www.w3.org/community/src/templates/wordpress/StoryTeller/img/svg/w3c-logo.svg"></a>
+        <a href="https://www.w3.org/community/lbd/" class="cgbg-logo"><img alt="w3c community group logo" src="https://www.w3.org/community/src/templates/wordpress/StoryTeller/img/svg/cgbg-logo.svg"></a>
+        <a href="https://www.w3.org/community/lbd/" class="cgbg-logo-title"><h1>Linked Building Data Community Group</h1></a>
+      </div>
+      <div class="white-bar"></div>
+      <div class="white-circle"></div>
+      <div class="blue-top"></div>
+      <div class="nav-logo"><a href="https://www.w3.org/community/lbd/">W3C Linked Building Data</a></div>
 
-<h1>Help!</h1>
-<p>The group is chaired by <a href="mailto:pipauwel.pauwels@ugent.be">Pieter Pauwels</a>, <a href="mailto:georg.schneider@ibp.fraunhofer.de">Georg Schneider</a> and <a href="http://kdeg.scss.tcd.ie/users/mcglink">Kris McGlinn</a>. Questions go to them.</p>
-</body>
+
+
+    <!-- banner -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+          </a>
+            <div class="nav-collapse">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#aim">Aim and Scope</a>
+                </li>
+                <li>
+                  <a href="#rationale">Rationale</a>
+                </li>
+                <li>
+                  <a href="#licensing">Licensing</a>
+                </li>
+                <li>
+                  <a href="#work">Deliverables</a>
+                </li>
+                <li>
+                  <a href="#organization">Organization</a>
+                </li>
+                <li>
+                  <a href="#join">Get involved</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="container main">
+        <div class="row-fluid">
+          <div class="span12">
+
+            <h2 id="introduction">Aim and Scope</h1>
+            <div>
+              <p>The Linked Building Data Community Group (LBD-CG) is a <a href="https://www.w3.org/community/">W3C Community Group</a> that brings together experts in the area of Building Information Modeling (BIM) and Web of Data technologies, who are working to address the challenge of managing the huge amount of data that is generated across the building life cycle.</p>
+              <p>Also, we want to provide a forum for bringing together researchers and practitioners who are working on advancing the field.</p>
+            </div>
+
+
+            <h2 id="rationale">Rationale</h1>
+            <div>
+              <p>Vast amounts of heterogeneous data are generated and used during the <b>life cycle of a building</b>. 
+              An example is product data, which describe the building and the elements that make up the building. 
+              Product data includes walls, windows, pipes, ducts, light switches, sensors and other devices. 
+              With these data as a basis, and through their connection to more fine-grained data, such as sensor measurements data, 
+              usage data, intelligent domotic system data, geographical data, weather data, 
+              highly advanced services can be supplied over the Web to various end users.</p>
+
+              <p> From an industrial point of view, using Linked Data technologies and adopting common Knowledge Graph
+              models are essential to exploiting building data on the web for a range of important use cases, 
+              including those related to indoor navigation (e.g. shop navigation, evacuation and disaster, etc.), 
+              energy efficiency simulation (e.g. retrofitting, behavioural change, etc.), 
+              web-based facility management, and many more. 
+              </p>
+              <p></p>
+              The outcomes generated by this group will support building owners and companies to publish quality building data on 
+              the web in a structured way, making the development of new and novel applications possible.</p>
+
+              <p>The <a href="https://www.w3.org/DesignIssues/LinkedData.html">5 stars Linked Data paradigm</a> can be adapted for Building-related data as follows:</p>
+
+              <ul>
+                <li>Using URIs as names for building-related things such as: rooms, walls, products, elements, 
+                enable different parties to provide complementary descriptions of the same uniquely identified 
+                entities in different knowledge graphs.</li>
+                <li>Using HTTP URIs for these things enables the authority responsible for these URIs to provide 
+                reference information about this entity when one looks it up on the Web. For example, products 
+                in a catalogue, building appliances, or even the building itself.</li>
+                <li>Providing information using common standards (RDF, SPARQL) and common Knowledge Graph models 
+                enable semantic interoperability between data sources.</li> 
+                <li>Include links to other URIs can help to discover more things, such as a link to the catalogue 
+                an appliance has been chosen from, or a link to the 
+                <a href="https://www.w3.org/TR/wot-architecture/#sec-servient-architecture">Web of Things Servient
+                </a> that enables it to interact with this appliance.</li> 
+              </ul>  
+            </div>
+
+            <h2 id="licensing">
+              Licensing and Terms of Contributions
+            </h2>
+            <div>
+              By contributing to this group, you abaide by the <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. All published deliverables by the group are also released under this license. Learn more about <a hre="https://www.w3.org/community/">W3C Community Groups</a>.
+            </div>
+            <h2 id="work">
+              Deliverables and Ongoing community work
+            </h2>
+            <div>
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Links (if available)</th>
+                  </tr>
+                  <tr>
+                    <td>The Building Topology Ontology (BOT): a minimal ontology for describing the core topological concepts of a building.</td>
+                    <td>Community Group Report</td>
+                    <td>
+                      <ul><li><a href="https://w3id.org/bot">https://w3id.org/bot</a></li></ul></td>
+                  </tr>
+                  <tr>
+                    <td>Linked Building Data Community Group Use Cases & Requirements</td>
+                    <td>Ongoing</td>
+                    <td><ul><li><a href="https://w3c-lbd-cg.github.io/lbd/UseCasesAndRequirements/">https://w3c-lbd-cg.github.io/lbd/UseCasesAndRequirements/</a></li></ul></td>
+                  </tr>
+                  <tr>
+                    <td>Building Data on the Web Best Practices</td>
+                    <td>Planned</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Products</td>
+                    <td>Ongoing</td>
+                    <td><ul>
+  <li><b><a href="https://docs.google.com/document/d/1ArLPgMC4js6i0tGFcYyWHIvlYGNq2Tou-Ed_tPHVo7A/edit">Working document</a></b></li>
+  <li><a href="https://github.com/w3c-lbd-cg/product">GIT Repo</a></li>
+  <li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/product/20170823_Presentation_ES_LBD.pdf">20170823 BOT, products, and goodrelations (Emilio San Filippo)</a></li>
+</ul></td>
+                  </tr>
+<tr>
+                    <td>Properties evaluation</td>
+                    <td>Ongoing</td>
+                    <td><ul>
+  <li><b><a href="https://docs.google.com/document/d/1gl_eQSl60GuOmIwu4BgUqte_4nWgjCvx05W0-7yK9qw/edit">Working document</a></b></li>
+  <li><a href="https://github.com/w3c-lbd-cg/props">GIT Repo</a></li>
+  <li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/props/presentation_LBDcall_20180312_final.pdf">20180312 Towards a PROPS ontology (Mathias Bonduel)</a></li>
+</ul></td>
+                  </tr>
+                  <tr>
+                    <td>Building-specific taxonomy of products, and properties</td>
+                    <td>Planned</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Geometry</td>
+                    <td>Ongoing work</td>
+                    <td><ul><li><a href="geometry.html">See dedicated page</a></li></ul></td>
+                  </tr>
+                  <tr>
+                    <td>Project Management</td>
+                    <td>Ongoing work</td>
+                    <td>
+                      <ul>
+                        <li><b><a href="https://docs.google.com/document/d/1hlsQxLXZI-0rupm4qKSOWuigy71l8fo0AvLg2bOcA1U/edit">Working document</a></b></li>
+                        <li><a href="https://github.com/w3c-lbd-cg/project">GIT Repo</a></li>
+                        <li><a href="https://github.com/w3c-lbd-cg/lbd/blob/gh-pages/presentations/project/20180326_PZangeneh_ProjectOntology.pdf">20180328 Project ontology (Pouya Zangeneh)</a></li>
+                      </ul>
+                    </td>
+                </tbody>
+              </table>
+
+              <p>The <a href="archive.html">Group's Archive page</a> lists documents that have been part of the group's activity in the past.</p> 
+            </div>
+
+
+            <h2 id="organization">Organization</h2>
+            <h3 id="chairs">Group chairs</h3>
+            <ul>
+              <li><strong><a href="http://www.krismcglinn.com/">Kris McGlinn</a></strong>, Trinity College Dublin</li>
+              <li><strong><a href="https://www.linkedin.com/in/georgferdinandschneider">Georg Ferdinand Schneider</a></strong>, Schaeffler Technologies AG & Co. KG</li>
+              <li><strong><a href="http://maxime-lefrancois.info/">Maxime Lefrançois</a></strong>, MINES Saint-Étienne, France</li>
+              <li><strong><a href="https://www.linkedin.com/in/mads-holten-rasmussen-061b7414">Mads Holten Rasmussen</a></strong>, NIRAS</li>
+              <li><strong><a href="http://ulisboa.academia.edu/RuideKlerk">Rui De Klerk Mota</a></strong>, University of Lisbon</li>
+            </ul>
+            <h3 id="members_list">Members</h3>
+            <div>
+              <p>The Linked Building Data community group has 100+ members. For a list of members, see <a href="https://www.w3.org/community/lbd/participants">https://www.w3.org/community/lbd/participants</a>. </p>
+            </div>
+            
+            <h3 id="meetings">Meetings and minutes</h3>
+            <p>The group has regular online teleconference meetings, announced on the mailing list. See the past meetings and minutes at the following page: <a href="https://www.w3.org/community/lbd/meeting-minutes/">https://www.w3.org/community/lbd/meeting-minutes/</a>.</p>
+
+            <h2 id="join">Get involved</h2>
+            <div>
+              <p>For discussions etc., we use the public mailing list of the group <a href="mailto:public-lbd@w3.org">public-lbd@w3.org</a>.<br> The archives are available online at <a href="https://lists.w3.org/Archives/Public/public-lbd/">https://lists.w3.org/Archives/Public/public-lbd/</a>.
+              </p>
+              <p>
+                Anyone may join this Community Group. All participants in this group have signed the <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement</a>.
+              </p>
+              <a href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Flbd%2Fjoin" class="btn btn-primary">Join or leave this group</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./files/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="./files/jquery.smooth-scroll.min.js" type="text/javascript"></script>
+    <script src="./files/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./files/custom.js" type="text/javascript"></script>
+  </body>
 </html>
