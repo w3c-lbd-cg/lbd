@@ -123,6 +123,4 @@ Open data sets:
 
 <div>
 
-[[7]](#ftnt_ref7) 
-
 </div>
