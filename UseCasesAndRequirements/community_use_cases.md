@@ -54,7 +54,7 @@ Corridors can have multiple aisles (even atriums) with different widths. How to 
 
 Relevant data standards: gbXML
 
-Building Energy
+## Building Energy
 
 Use Case 1: Calculating transfer surfaces
 
@@ -62,7 +62,7 @@ Calculating transfer surfaces from space to space (or zone) through walls for en
 
 Relevant data standards: ifcOWL
 
-Building Products
+## Building Products
 
 ### Use Case 1: Separating BIM product from BIM project descriptions
 
